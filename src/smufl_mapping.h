@@ -74,6 +74,17 @@ const SmuflGlyphInfo* getGlyphInfo(std::string_view name,
 const std::string_view* getGlyphName(char32_t codepoint,
                                      std::optional<SmuflGlyphSource> optionalSource = std::nullopt);
 
+/// @brief Look up the SMuFL glyph name for either a SMuFL font or a legacy music font.
+/// @param fontName The font name, used when `fontIsSmufl` is false.
+/// @param codepoint The encoded character to look up.
+/// @param fontIsSmufl True when `codepoint` is already a SMuFL codepoint in a SMuFL font.
+/// @param optionalSource If provided for a SMuFL font, search that optional glyph set after the standard set.
+/// @return Pointer to glyph name (`std::string_view`) if found, or nullptr.
+const std::string_view* getGlyphNameForFont(std::string_view fontName,
+                                            char32_t codepoint,
+                                            bool fontIsSmufl,
+                                            std::optional<SmuflGlyphSource> optionalSource = std::nullopt);
+
 /// @brief Lookup legacy glyph info by font name and codepoint.
 /// @param fontName The name of the legacy font (e.g., "maestro", "petrucci"). This is a case-insensitive search.
 /// @param codepoint The legacy font codepoint to search for. (Commonly in the 0x00..0xFF range, but may be larger).

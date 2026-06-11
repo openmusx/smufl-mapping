@@ -136,3 +136,27 @@ TEST(SmuflMappingTest, GetGlyphNameOptionalSourceScenarios)
     name = getGlyphName(0xF503, SmuflGlyphSource::Finale);
     EXPECT_EQ(name, nullptr);
 }
+
+TEST(SmuflMappingTest, GetGlyphNameForFontSmuflFontUsesNeutralDefault)
+{
+    auto name = getGlyphNameForFont("Any SMuFL Font", 0xE220, true);
+    ASSERT_TRUE(name);
+    EXPECT_EQ(*name, "tremolo1");
+
+    name = getGlyphNameForFont("Any SMuFL Font", 0xF813, true);
+    EXPECT_EQ(name, nullptr);
+
+    name = getGlyphNameForFont("Any SMuFL Font", 0xF813, true, SmuflGlyphSource::Finale);
+    ASSERT_TRUE(name);
+    EXPECT_EQ(*name, "textEnclosureSegmentArrow");
+}
+
+TEST(SmuflMappingTest, GetGlyphNameForFontLegacyFontUsesFontName)
+{
+    auto name = getGlyphNameForFont("Maestro", 62, false);
+    ASSERT_TRUE(name);
+    EXPECT_EQ(*name, "articAccentAbove");
+
+    name = getGlyphNameForFont("Unknown Font", 62, false);
+    EXPECT_EQ(name, nullptr);
+}
