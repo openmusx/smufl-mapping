@@ -118,6 +118,22 @@ const std::string_view* getGlyphName(char32_t codepoint,
     return nullptr;
 }
 
+const std::string_view* getGlyphNameForFont(std::string_view fontName,
+                                            char32_t codepoint,
+                                            bool fontIsSmufl,
+                                            std::optional<SmuflGlyphSource> optionalSource)
+{
+    if (fontIsSmufl) {
+        return getGlyphName(codepoint, optionalSource);
+    }
+
+    if (const LegacyGlyphInfo* legacyInfo = getLegacyGlyphInfo(fontName, codepoint)) {
+        return &legacyInfo->name;
+    }
+
+    return nullptr;
+}
+
 // Lowercase normalization for case-insensitive font name lookup.
 // Also removes whitespace so font keys match regardless of platform naming differences.
 static std::string normalizeFontKey(std::string_view s)
