@@ -21,11 +21,18 @@ jobs:
           - os: macos-latest
             generator: Ninja
           - os: windows-latest
-            generator: "Visual Studio 17 2022"
+            generator: Ninja
     steps:
       # Step 1: Check out the repository
       - name: Checkout code
         uses: actions/checkout@v4
+
+      # Ninja needs the MSVC toolchain on PATH. Using Ninja rather than a
+      # versioned "Visual Studio NN" generator keeps the build working when the
+      # runner image rolls forward to a new Visual Studio.
+      - name: Set up MSVC
+        if: matrix.os == 'windows-latest'
+        uses: ilammy/msvc-dev-cmd@v1
 
       # Step 2: Display Preinstalled Tools
       - name: Display preinstalled tools
@@ -39,11 +46,15 @@ jobs:
 
       - name: Install Ninja on macOS
         if: matrix.os == 'macos-latest'
-        run: brew install ninja
+        run: brew install ninja || echo "Ninja already installed"
+
+      - name: Install Ninja on Windows
+        if: matrix.os == 'windows-latest'
+        run: |
+          ninja --version && echo "Ninja already installed" || choco install ninja -y
 
       - name: Verify Ninja Installation
-        if: matrix.os != 'windows-latest'
-        run: ninja --version || echo "Ninja is not available on this platform"
+        run: ninja --version
 
       # Step 4: Python for the generators. Only this job needs it: the
       # pre-generated job below must keep building without Python at all, which
@@ -80,13 +91,9 @@ jobs:
       - name: Build
         run: cmake --build build --parallel 2
 
-      # Step 7: Run tests (separate handling for Windows multi-config)
-      - name: Run tests (Windows)
-        if: matrix.os == 'windows-latest'
-        run: ctest --test-dir build --output-on-failure -C Release
-
-      - name: Run tests (Unix & macOS)
-        if: matrix.os != 'windows-latest'
+      # Step 7: Run tests. Ninja is single-config on every platform, so no -C is
+      # needed and one step covers all three.
+      - name: Run tests
         run: ctest --test-dir build --output-on-failure
 
   build-and-test-pregen:
@@ -101,10 +108,14 @@ jobs:
           - os: macos-latest
             generator: Ninja
           - os: windows-latest
-            generator: "Visual Studio 17 2022"
+            generator: Ninja
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Set up MSVC
+        if: matrix.os == 'windows-latest'
+        uses: ilammy/msvc-dev-cmd@v1
 
       - name: Display preinstalled tools
         run: |
@@ -116,22 +127,23 @@ jobs:
 
       - name: Install Ninja on macOS
         if: matrix.os == 'macos-latest'
-        run: brew install ninja
+        run: brew install ninja || echo "Ninja already installed"
+
+      - name: Install Ninja on Windows
+        if: matrix.os == 'windows-latest'
+        run: |
+          ninja --version && echo "Ninja already installed" || choco install ninja -y
 
       - name: Verify Ninja Installation
-        if: matrix.os != 'windows-latest'
-        run: ninja --version || echo "Ninja is not available on this platform"
+        run: ninja --version
 
+      # No Python step here on purpose: this job proves the library builds and
+      # tests with no Python available, which is how clients consume it.
       - name: Configure CMake
         run: cmake -S . -B build -G "${{ matrix.generator }}" -DSMUFL_MAPPING_USE_PREGENERATED_HEADERS=ON
 
       - name: Build
         run: cmake --build build --parallel 2
 
-      - name: Run tests (Windows)
-        if: matrix.os == 'windows-latest'
-        run: ctest --test-dir build --output-on-failure -C Release
-
-      - name: Run tests (Unix & macOS)
-        if: matrix.os != 'windows-latest'
+      - name: Run tests
         run: ctest --test-dir build --output-on-failure
