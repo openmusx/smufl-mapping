@@ -1,12 +1,21 @@
 {
-    "enclosureClosed": [
-        {
-            "legacyCodepoints": [
-                "94"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F74A",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "smuflSuccessorFont": null,
+        "successorNotes": "The file maps a single glyph, which is too little to establish a successor.",
+        "staffSpacesPerEm": 4.0
+    },
+    "glyphs": {
+        "enclosureClosed": [
+            {
+                "legacyCodepoints": [
+                    "94"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F74A",
+                "description": ""
+            }
+        ]
+    }
 }

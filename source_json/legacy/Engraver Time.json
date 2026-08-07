@@ -1,102 +1,111 @@
 {
-    "timeSig0Large": [
-        {
-            "legacyCodepoints": [
-                "48"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig1Large": [
-        {
-            "legacyCodepoints": [
-                "49"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig2Large": [
-        {
-            "legacyCodepoints": [
-                "50"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig3Large": [
-        {
-            "legacyCodepoints": [
-                "51"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig4Large": [
-        {
-            "legacyCodepoints": [
-                "52"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig5Large": [
-        {
-            "legacyCodepoints": [
-                "53"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig6Large": [
-        {
-            "legacyCodepoints": [
-                "54"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig7Large": [
-        {
-            "legacyCodepoints": [
-                "55"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig8Large": [
-        {
-            "legacyCodepoints": [
-                "56"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "timeSig9Large": [
-        {
-            "legacyCodepoints": [
-                "57"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": "Finale Engraver",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Measured against Finale Engraver after resolving the U+FFFD entries through glyphnamesFinale.json: 15 of 20 measurements match 4.0 exactly. The large time signature digits are about 8.6 staff spaces tall by design, and Finale Engraver draws the same glyphs (U+F440-U+F449) at the same em scale, 2.15 em."
+    },
+    "glyphs": {
+        "timeSig0Large": [
+            {
+                "legacyCodepoints": [
+                    "48"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig1Large": [
+            {
+                "legacyCodepoints": [
+                    "49"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig2Large": [
+            {
+                "legacyCodepoints": [
+                    "50"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig3Large": [
+            {
+                "legacyCodepoints": [
+                    "51"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig4Large": [
+            {
+                "legacyCodepoints": [
+                    "52"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig5Large": [
+            {
+                "legacyCodepoints": [
+                    "53"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig6Large": [
+            {
+                "legacyCodepoints": [
+                    "54"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig7Large": [
+            {
+                "legacyCodepoints": [
+                    "55"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig8Large": [
+            {
+                "legacyCodepoints": [
+                    "56"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "timeSig9Large": [
+            {
+                "legacyCodepoints": [
+                    "57"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ]
+    }
 }

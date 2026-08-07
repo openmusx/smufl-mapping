@@ -30,6 +30,7 @@
 #include "detail/glyphnames_finale.h"
 #include "detail/glyphnames_bravura.h"
 #include "detail/glyphnames_legacy.h"
+#include "detail/smufl_fonts.h"
 
 namespace smufl_mapping {
 
@@ -185,6 +186,34 @@ const std::pair<char32_t, LegacyGlyphInfo>* findLegacyRange(
 }
 
 } // namespace
+
+std::optional<SmuflFontInfo> getSmuflFontInfo(std::string_view fontName)
+{
+    const auto normalizedFontName = normalizeFontKey(fontName);
+    const std::string_view key(normalizedFontName);
+    const auto* record = binarySearchByKey(key, detail::smuflFonts);
+    if (!record) {
+        return std::nullopt;
+    }
+    return SmuflFontInfo{ record->fontType,
+                          record->fontStyle,
+                          record->staffSpacesPerEm,
+                          record->sizeNotes };
+}
+
+std::optional<LegacyFontInfo> getLegacyFontInfo(std::string_view fontName)
+{
+    const auto* mapping = findLegacyFont(fontName);
+    if (!mapping) {
+        return std::nullopt;
+    }
+    return LegacyFontInfo{ mapping->fontType,
+                           mapping->fontStyle,
+                           mapping->smuflSuccessorFont,
+                           mapping->successorNotes,
+                           mapping->staffSpacesPerEm,
+                           mapping->sizeNotes };
+}
 
 const LegacyGlyphInfo* getLegacyGlyphInfo(std::string_view fontName, char32_t codepoint)
 {

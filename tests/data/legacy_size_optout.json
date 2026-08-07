@@ -1,0 +1,18 @@
+{
+  "fontMetadata": {
+    "fontType": "text",
+    "fontStyle": "engraved",
+    "smuflSuccessorFont": "Finale Maestro Text",
+    "staffSpacesPerEm": null,
+    "sizeNotes": "A font whose point size has no staff-relative meaning."
+  },
+  "glyphs": {
+    "glyphOriginal": [
+      {
+        "legacyCodepoints": ["0x2B"],
+        "codepoint": "U+E000",
+        "description": "Opting out of size mapping is valid"
+      }
+    ]
+  }
+}

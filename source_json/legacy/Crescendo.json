@@ -1,47 +1,57 @@
 {
-    "harpPedalRaised": [
-        {
-            "legacyCodepoints": [
-                "82"
-            ],
-            "codepoint": "U+E680",
-            "description": ""
-        }
-    ],
-    "harpPedalCentered": [
-        {
-            "legacyCodepoints": [
-                "114"
-            ],
-            "codepoint": "U+E681",
-            "description": ""
-        }
-    ],
-    "harpPedalLowered": [
-        {
-            "legacyCodepoints": [
-                "168"
-            ],
-            "codepoint": "U+E682",
-            "description": ""
-        }
-    ],
-    "harpPedalDivider": [
-        {
-            "legacyCodepoints": [
-                "229"
-            ],
-            "codepoint": "U+E683",
-            "description": ""
-        }
-    ],
-    "pluckedSnapPizzicatoAbove": [
-        {
-            "legacyCodepoints": [
-                "243"
-            ],
-            "codepoint": "U+E631",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": null,
+        "successorNotes": "No candidate SMuFL face shares its designs.",
+        "staffSpacesPerEm": null,
+        "sizeNotes": "Measured, but no consistent scale: the harp pedal glyphs imply roughly 5.4 staff spaces per em while pluckedSnapPizzicatoAbove implies roughly 2.6. The font's em is not staff-relative."
+    },
+    "glyphs": {
+        "harpPedalRaised": [
+            {
+                "legacyCodepoints": [
+                    "82"
+                ],
+                "codepoint": "U+E680",
+                "description": ""
+            }
+        ],
+        "harpPedalCentered": [
+            {
+                "legacyCodepoints": [
+                    "114"
+                ],
+                "codepoint": "U+E681",
+                "description": ""
+            }
+        ],
+        "harpPedalLowered": [
+            {
+                "legacyCodepoints": [
+                    "168"
+                ],
+                "codepoint": "U+E682",
+                "description": ""
+            }
+        ],
+        "harpPedalDivider": [
+            {
+                "legacyCodepoints": [
+                    "229"
+                ],
+                "codepoint": "U+E683",
+                "description": ""
+            }
+        ],
+        "pluckedSnapPizzicatoAbove": [
+            {
+                "legacyCodepoints": [
+                    "243"
+                ],
+                "codepoint": "U+E631",
+                "description": ""
+            }
+        ]
+    }
 }

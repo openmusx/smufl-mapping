@@ -41,9 +41,25 @@ def normalize_font_key(name: str) -> str:
     """Lowercase the font name and strip all whitespace so lookups are platform-agnostic."""
     return ''.join(name.lower().split())
 
-def process_legacy_file(path: Path, finale_map: dict, bravura_map: dict) -> tuple[str, Path]:
+FONT_TYPE_ENUM = {
+    "engraving": "MusicFontType::Engraving",
+    "text": "MusicFontType::Text",
+}
+
+FONT_STYLE_ENUM = {
+    "engraved": "MusicFontStyle::Engraved",
+    "handwritten": "MusicFontStyle::Handwritten",
+}
+
+def cpp_string_literal(text: str) -> str:
+    return text.replace("\\", "\\\\").replace('"', '\\"')
+
+def process_legacy_file(path: Path, finale_map: dict, bravura_map: dict) -> tuple[str, Path, dict]:
     with path.open("r", encoding="utf-8") as f:
         data = load_json_strict(f, location=str(path))
+
+    metadata = data["fontMetadata"]
+    glyphs = data["glyphs"]
 
     fontname = path.stem
     varname = sanitize_var_name(fontname) + "LegacyGlyphs"
@@ -51,7 +67,7 @@ def process_legacy_file(path: Path, finale_map: dict, bravura_map: dict) -> tupl
 
     entries = []
 
-    for glyphname, value in data.items():
+    for glyphname, value in glyphs.items():
         glyphname = glyphname.strip()
 
         raw_entries = value if isinstance(value, list) else [value]
@@ -84,8 +100,14 @@ def process_legacy_file(path: Path, finale_map: dict, bravura_map: dict) -> tupl
                     codepoint = resolved
                     # print(f"Resolved 0xFFFD for {glyphname} → U+{resolved:04X}")
                 else:
-                    print(f"Could not resolve 0xFFFD for {glyphname}; setting to 0")
-                    codepoint = 0
+                    # LegacyGlyphInfo::codepoint is std::optional, and nullopt is
+                    # how it spells "unspecified". Emitting 0 here would instead
+                    # produce an engaged optional holding a codepoint that no
+                    # glyph occupies, which callers cannot distinguish from a
+                    # real mapping. The glyph name is still known and useful, so
+                    # the entry is kept rather than dropped.
+                    print(f"Could not resolve 0xFFFD for {glyphname}; emitting nullopt codepoint")
+                    codepoint = None
             else:
                 if not raw_codepoint:
                     print(f"Missing codepoint for '{glyphname}' in {path.name}; skipping")
@@ -96,14 +118,17 @@ def process_legacy_file(path: Path, finale_map: dict, bravura_map: dict) -> tupl
                     print(f"Invalid codepoint '{raw_codepoint}' for '{glyphname}' in {path.name}; skipping")
                     continue
 
+            # An unresolved codepoint is in no range at all, optional or standard.
+            in_optional_range = codepoint is not None and 0xF400 <= codepoint <= 0xF8FF
+
             # Filter optional-range entries not in glyphnamesFinale
-            if 0xF400 <= codepoint <= 0xF8FF:
+            if in_optional_range:
                 target_map = bravura_map if smufl_font == "bravura" else finale_map
                 if glyphname not in target_map:
                     print(f"Omitting optional-range glyph '{glyphname}' (not found in glyphnames{smufl_font.capitalize()})")
                     continue
 
-            if 0xF400 <= codepoint <= 0xF8FF:
+            if in_optional_range:
                 if smufl_font == "bravura":
                     source_enum = "SmuflGlyphSource::Bravura"
                 else:
@@ -139,23 +164,31 @@ def process_legacy_file(path: Path, finale_map: dict, bravura_map: dict) -> tupl
         out.write('#pragma once\n\n')
         out.write('#include "smufl_mapping.h"\n\n')
         out.write('namespace smufl_mapping::detail::legacy {\n\n')
-        out.write(f'constexpr std::pair<char32_t, LegacyGlyphInfo> {varname}[] = {{\n')
-        for legacy_cp, gname, cp, desc, source, is_alternate in entries:
-            desc_escaped = desc.replace('"', '\\"')
-            alt_literal = "true" if is_alternate else "false"
-            out.write(f'    {{ {legacy_cp:3}, '
-                    f'{{ "{gname}", 0x{cp:X}, "{desc_escaped}", {source}, {alt_literal} }} }},\n')
-        out.write('};\n\n')
+        if entries:
+            out.write(f'constexpr std::pair<char32_t, LegacyGlyphInfo> {varname}[] = {{\n')
+            for legacy_cp, gname, cp, desc, source, is_alternate in entries:
+                desc_escaped = desc.replace('"', '\\"')
+                alt_literal = "true" if is_alternate else "false"
+                cp_literal = "std::nullopt" if cp is None else f"0x{cp:X}"
+                out.write(f'    {{ {legacy_cp:3}, '
+                        f'{{ "{gname}", {cp_literal}, "{desc_escaped}", {source}, {alt_literal} }} }},\n')
+            out.write('};\n\n')
+        else:
+            # A metadata-only record: the font is known and has a successor, but no
+            # glyph mappings exist for it. No array is emitted, because a zero-size
+            # array is a compiler extension that -Wpedantic -Werror rejects; the
+            # master header pairs this font with a null table instead.
+            out.write(f'// {fontname} has no glyph mappings; see glyphnames_legacy.h.\n\n')
         out.write('} // namespace smufl_mapping::detail::legacy\n')
 
-    return varname, outpath
+    return varname, outpath, metadata, len(entries)
 
 from typing import List, Tuple
-def emit_master_header(entries: List[Tuple[str, str]]):
-    # entries: list of (fontname, varname) tuples
+def emit_master_header(entries: List[Tuple[str, str, dict, int]]):
+    # entries: list of (fontname, varname, metadata, glyph_count) tuples
     normalized_entries = [
-        (fontname, varname, normalize_font_key(fontname))
-        for fontname, varname in entries
+        (fontname, varname, normalize_font_key(fontname), metadata, count)
+        for fontname, varname, metadata, count in entries
     ]
     normalized_entries.sort(key=lambda item: item[2])
     outpath = MASTER_HEADER
@@ -174,7 +207,7 @@ def emit_master_header(entries: List[Tuple[str, str]]):
         out.write('#pragma once\n\n')
         out.write('#include "smufl_mapping.h"\n\n')
 
-        for fontname, _, _ in normalized_entries:
+        for fontname, _, _, _, _ in normalized_entries:
             out.write(f'#include "detail/legacy/{sanitize_file_name(fontname)}_legacy_map.h"\n')
 
         out.write('\nnamespace smufl_mapping::detail {\n\n')
@@ -182,11 +215,33 @@ def emit_master_header(entries: List[Tuple[str, str]]):
         out.write('struct LegacyFontMapping {\n')
         out.write('    const std::pair<char32_t, LegacyGlyphInfo>* table;\n')
         out.write('    std::size_t size;\n')
+        out.write('    MusicFontType fontType;\n')
+        out.write('    MusicFontStyle fontStyle;\n')
+        out.write('    std::string_view smuflSuccessorFont;\n')
+        out.write('    std::string_view successorNotes;\n')
+        out.write('    std::optional<double> staffSpacesPerEm;\n')
+        out.write('    std::string_view sizeNotes;\n')
         out.write('};\n\n')
 
         out.write('constexpr std::pair<std::string_view, LegacyFontMapping> legacyFontMappings[] = {\n')
-        for fontname, varname, normalized_key in normalized_entries:
-            out.write(f'    {{ "{normalized_key}", {{legacy::{varname}, std::size(legacy::{varname})}} }},\n')
+        for fontname, varname, normalized_key, metadata, count in normalized_entries:
+            font_type = FONT_TYPE_ENUM[metadata["fontType"]]
+            font_style = FONT_STYLE_ENUM[metadata["fontStyle"]]
+            table = (f'legacy::{varname}, std::size(legacy::{varname})'
+                     if count else 'nullptr, 0')
+            spaces = metadata["staffSpacesPerEm"]
+            spaces_literal = "std::nullopt" if spaces is None else f"{float(spaces)!r}"
+            # An absent successor is the empty string rather than another
+            # optional: string_view is already nullable in the sense that
+            # matters, and empty() reads the same at the call site.
+            successor = cpp_string_literal(metadata.get("smuflSuccessorFont") or "")
+            successor_notes = cpp_string_literal(metadata.get("successorNotes", ""))
+            notes = cpp_string_literal(metadata.get("sizeNotes", ""))
+            out.write(
+                f'    {{ "{normalized_key}", {{{table}, '
+                f'{font_type}, {font_style}, "{successor}", "{successor_notes}", '
+                f'{spaces_literal}, "{notes}"}} }},\n'
+            )
         out.write('};\n\n')
 
         out.write('} // namespace smufl_mapping::detail\n')
@@ -199,8 +254,8 @@ def main():
     all_entries = []
     for json_path in sorted(SOURCE_DIR.glob("*.json")):
         fontname = json_path.stem
-        varname, _ = process_legacy_file(json_path, finale_map, bravura_map)
-        all_entries.append((fontname, varname))
+        varname, _, metadata, count = process_legacy_file(json_path, finale_map, bravura_map)
+        all_entries.append((fontname, varname, metadata, count))
 
     emit_master_header(all_entries)
 

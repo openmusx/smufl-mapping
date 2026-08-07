@@ -1,0 +1,11 @@
+{
+    "fontMetadata": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": "Finale Maestro",
+        "successorNotes": "A best-fit substitution rather than a design successor. Sonata is an Adobe font with no SMuFL migration path; Pmusic, which derives from it, names the same substitute. No glyph mappings are available for this font: the record exists so that a client substituting a modern face can still resolve a successor.",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Recorded from prior knowledge, not measured: Sonata sized the same way as Pmusic, which measures 4.0. The font is an Adobe Type 1 face that does not run on current macOS, so it could not be verified here."
+    },
+    "glyphs": {}
+}

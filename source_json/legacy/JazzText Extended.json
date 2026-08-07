@@ -1,591 +1,600 @@
 {
-    "enclosureParenOverExtensionLong": [
-        {
-            "legacyCodepoints": [
-                "94"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F726",
-            "description": ""
-        }
-    ],
-    "ring": [
-        {
-            "legacyCodepoints": [
-                "96"
-            ],
-            "codepoint": "U+02DA",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "147"
-            ],
-            "codepoint": "U+02DA",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "251"
-            ],
-            "codepoint": "U+02DA",
-            "description": ""
-        }
-    ],
-    "Adieresis": [
-        {
-            "legacyCodepoints": [
-                "128"
-            ],
-            "codepoint": "U+00C4",
-            "description": ""
-        }
-    ],
-    "Aring": [
-        {
-            "legacyCodepoints": [
-                "129"
-            ],
-            "codepoint": "U+00C5",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "203"
-            ],
-            "codepoint": "U+00C5",
-            "description": ""
-        }
-    ],
-    "Ccedilla": [
-        {
-            "legacyCodepoints": [
-                "130"
-            ],
-            "codepoint": "U+00C7",
-            "description": ""
-        }
-    ],
-    "Eacute": [
-        {
-            "legacyCodepoints": [
-                "131"
-            ],
-            "codepoint": "U+00C9",
-            "description": ""
-        }
-    ],
-    "Ntilde": [
-        {
-            "legacyCodepoints": [
-                "132"
-            ],
-            "codepoint": "U+00D1",
-            "description": ""
-        }
-    ],
-    "Odieresis": [
-        {
-            "legacyCodepoints": [
-                "133"
-            ],
-            "codepoint": "U+00D6",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "241"
-            ],
-            "codepoint": "U+00D6",
-            "description": ""
-        }
-    ],
-    "Udieresis": [
-        {
-            "legacyCodepoints": [
-                "134"
-            ],
-            "codepoint": "U+00DC",
-            "description": ""
-        }
-    ],
-    "aacute": [
-        {
-            "legacyCodepoints": [
-                "135"
-            ],
-            "codepoint": "U+00E1",
-            "description": ""
-        }
-    ],
-    "aring": [
-        {
-            "legacyCodepoints": [
-                "136"
-            ],
-            "codepoint": "U+00E5",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "140"
-            ],
-            "codepoint": "U+00E5",
-            "description": ""
-        }
-    ],
-    "acircumflex": [
-        {
-            "legacyCodepoints": [
-                "137"
-            ],
-            "codepoint": "U+00E2",
-            "description": ""
-        }
-    ],
-    "adieresis": [
-        {
-            "legacyCodepoints": [
-                "138"
-            ],
-            "codepoint": "U+00E4",
-            "description": ""
-        }
-    ],
-    "atilde": [
-        {
-            "legacyCodepoints": [
-                "139"
-            ],
-            "codepoint": "U+00E3",
-            "description": ""
-        }
-    ],
-    "ccedilla": [
-        {
-            "legacyCodepoints": [
-                "141"
-            ],
-            "codepoint": "U+00E7",
-            "description": ""
-        }
-    ],
-    "eacute": [
-        {
-            "legacyCodepoints": [
-                "142"
-            ],
-            "codepoint": "U+00E9",
-            "description": ""
-        }
-    ],
-    "edieresis": [
-        {
-            "legacyCodepoints": [
-                "143"
-            ],
-            "codepoint": "U+00EB",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "145"
-            ],
-            "codepoint": "U+00EB",
-            "description": ""
-        }
-    ],
-    "ecircumflex": [
-        {
-            "legacyCodepoints": [
-                "144"
-            ],
-            "codepoint": "U+00EA",
-            "description": ""
-        }
-    ],
-    "acute": [
-        {
-            "legacyCodepoints": [
-                "146"
-            ],
-            "codepoint": "U+00B4",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "171"
-            ],
-            "codepoint": "U+00B4",
-            "description": ""
-        }
-    ],
-    "circumflex": [
-        {
-            "legacyCodepoints": [
-                "148"
-            ],
-            "codepoint": "U+02C6",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "246"
-            ],
-            "codepoint": "U+02C6",
-            "description": ""
-        }
-    ],
-    "dieresis": [
-        {
-            "legacyCodepoints": [
-                "149"
-            ],
-            "codepoint": "U+00A8",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "172"
-            ],
-            "codepoint": "U+00A8",
-            "description": ""
-        }
-    ],
-    "ntilde": [
-        {
-            "legacyCodepoints": [
-                "150"
-            ],
-            "codepoint": "U+00F1",
-            "description": ""
-        }
-    ],
-    "oacute": [
-        {
-            "legacyCodepoints": [
-                "151"
-            ],
-            "codepoint": "U+00F3",
-            "description": ""
-        }
-    ],
-    "odieresis": [
-        {
-            "legacyCodepoints": [
-                "152"
-            ],
-            "codepoint": "U+00F6",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "154"
-            ],
-            "codepoint": "U+00F6",
-            "description": ""
-        }
-    ],
-    "ocircumflex": [
-        {
-            "legacyCodepoints": [
-                "153"
-            ],
-            "codepoint": "U+00F4",
-            "description": ""
-        }
-    ],
-    "otilde": [
-        {
-            "legacyCodepoints": [
-                "155"
-            ],
-            "codepoint": "U+00F5",
-            "description": ""
-        }
-    ],
-    "uacute": [
-        {
-            "legacyCodepoints": [
-                "156"
-            ],
-            "codepoint": "U+00FA",
-            "description": ""
-        }
-    ],
-    "uring": [
-        {
-            "legacyCodepoints": [
-                "157"
-            ],
-            "codepoint": "U+016F",
-            "description": ""
-        }
-    ],
-    "ucircumflex": [
-        {
-            "legacyCodepoints": [
-                "158"
-            ],
-            "codepoint": "U+00FB",
-            "description": ""
-        }
-    ],
-    "udieresis": [
-        {
-            "legacyCodepoints": [
-                "159"
-            ],
-            "codepoint": "U+00FC",
-            "description": ""
-        }
-    ],
-    "registered": [
-        {
-            "legacyCodepoints": [
-                "168"
-            ],
-            "codepoint": "U+00AE",
-            "description": ""
-        }
-    ],
-    "trademark": [
-        {
-            "legacyCodepoints": [
-                "170"
-            ],
-            "codepoint": "U+2122",
-            "description": ""
-        }
-    ],
-    "Atilde": [
-        {
-            "legacyCodepoints": [
-                "204"
-            ],
-            "codepoint": "U+00C3",
-            "description": ""
-        }
-    ],
-    "Otilde": [
-        {
-            "legacyCodepoints": [
-                "205"
-            ],
-            "codepoint": "U+00D5",
-            "description": ""
-        }
-    ],
-    "quoteblleft": [
-        {
-            "legacyCodepoints": [
-                "210"
-            ],
-            "codepoint": "U+201C",
-            "description": ""
-        }
-    ],
-    "quoteblright": [
-        {
-            "legacyCodepoints": [
-                "211"
-            ],
-            "codepoint": "U+201D",
-            "description": ""
-        }
-    ],
-    "quoteleft": [
-        {
-            "legacyCodepoints": [
-                "212"
-            ],
-            "codepoint": "U+2018",
-            "description": ""
-        }
-    ],
-    "quoteright": [
-        {
-            "legacyCodepoints": [
-                "213"
-            ],
-            "codepoint": "U+2019",
-            "description": ""
-        }
-    ],
-    "ydieresis": [
-        {
-            "legacyCodepoints": [
-                "216"
-            ],
-            "codepoint": "U+00FF",
-            "description": ""
-        }
-    ],
-    "Ydieresis": [
-        {
-            "legacyCodepoints": [
-                "217"
-            ],
-            "codepoint": "U+0178",
-            "description": ""
-        }
-    ],
-    "periodcentered": [
-        {
-            "legacyCodepoints": [
-                "225"
-            ],
-            "codepoint": "U+0087",
-            "description": ""
-        }
-    ],
-    "quotesinglbase": [
-        {
-            "legacyCodepoints": [
-                "226"
-            ],
-            "codepoint": "U+201A",
-            "description": ""
-        }
-    ],
-    "Acircumflex": [
-        {
-            "legacyCodepoints": [
-                "229"
-            ],
-            "codepoint": "U+00C2",
-            "description": ""
-        }
-    ],
-    "Ecircumflex": [
-        {
-            "legacyCodepoints": [
-                "230"
-            ],
-            "codepoint": "U+00CA",
-            "description": ""
-        }
-    ],
-    "Aacute": [
-        {
-            "legacyCodepoints": [
-                "231"
-            ],
-            "codepoint": "U+00C1",
-            "description": ""
-        }
-    ],
-    "Edieresis": [
-        {
-            "legacyCodepoints": [
-                "232"
-            ],
-            "codepoint": "U+00CB",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "233"
-            ],
-            "codepoint": "U+00CB",
-            "description": ""
-        }
-    ],
-    "Iacute": [
-        {
-            "legacyCodepoints": [
-                "234"
-            ],
-            "codepoint": "U+00CD",
-            "description": ""
-        }
-    ],
-    "Icircumflex": [
-        {
-            "legacyCodepoints": [
-                "235"
-            ],
-            "codepoint": "U+00CE",
-            "description": ""
-        }
-    ],
-    "Idieresis": [
-        {
-            "legacyCodepoints": [
-                "236"
-            ],
-            "codepoint": "U+00CF",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "237"
-            ],
-            "codepoint": "U+00CF",
-            "description": ""
-        }
-    ],
-    "Oacute": [
-        {
-            "legacyCodepoints": [
-                "238"
-            ],
-            "codepoint": "U+00D3",
-            "description": ""
-        }
-    ],
-    "Ocircumflex": [
-        {
-            "legacyCodepoints": [
-                "239"
-            ],
-            "codepoint": "U+00D4",
-            "description": ""
-        }
-    ],
-    "Uacute": [
-        {
-            "legacyCodepoints": [
-                "242"
-            ],
-            "codepoint": "U+00DA",
-            "description": ""
-        }
-    ],
-    "Ucircumflex": [
-        {
-            "legacyCodepoints": [
-                "243"
-            ],
-            "codepoint": "U+00DB",
-            "description": ""
-        }
-    ],
-    "Uring": [
-        {
-            "legacyCodepoints": [
-                "244"
-            ],
-            "codepoint": "U+016E",
-            "description": ""
-        }
-    ],
-    "tilde": [
-        {
-            "legacyCodepoints": [
-                "247"
-            ],
-            "codepoint": "U+02DC",
-            "description": ""
-        }
-    ],
-    "cedilla": [
-        {
-            "legacyCodepoints": [
-                "252"
-            ],
-            "codepoint": "U+00B8",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "smuflSuccessorFont": "Finale Jazz Text",
+        "successorNotes": "46% of glyphs match Finale Jazz Text by aspect ratio.",
+        "staffSpacesPerEm": 4.0
+    },
+    "glyphs": {
+        "enclosureParenOverExtensionLong": [
+            {
+                "legacyCodepoints": [
+                    "94"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F726",
+                "description": ""
+            }
+        ],
+        "ring": [
+            {
+                "legacyCodepoints": [
+                    "96"
+                ],
+                "codepoint": "U+02DA",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "147"
+                ],
+                "codepoint": "U+02DA",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "251"
+                ],
+                "codepoint": "U+02DA",
+                "description": ""
+            }
+        ],
+        "Adieresis": [
+            {
+                "legacyCodepoints": [
+                    "128"
+                ],
+                "codepoint": "U+00C4",
+                "description": ""
+            }
+        ],
+        "Aring": [
+            {
+                "legacyCodepoints": [
+                    "129"
+                ],
+                "codepoint": "U+00C5",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "203"
+                ],
+                "codepoint": "U+00C5",
+                "description": ""
+            }
+        ],
+        "Ccedilla": [
+            {
+                "legacyCodepoints": [
+                    "130"
+                ],
+                "codepoint": "U+00C7",
+                "description": ""
+            }
+        ],
+        "Eacute": [
+            {
+                "legacyCodepoints": [
+                    "131"
+                ],
+                "codepoint": "U+00C9",
+                "description": ""
+            }
+        ],
+        "Ntilde": [
+            {
+                "legacyCodepoints": [
+                    "132"
+                ],
+                "codepoint": "U+00D1",
+                "description": ""
+            }
+        ],
+        "Odieresis": [
+            {
+                "legacyCodepoints": [
+                    "133"
+                ],
+                "codepoint": "U+00D6",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "241"
+                ],
+                "codepoint": "U+00D6",
+                "description": ""
+            }
+        ],
+        "Udieresis": [
+            {
+                "legacyCodepoints": [
+                    "134"
+                ],
+                "codepoint": "U+00DC",
+                "description": ""
+            }
+        ],
+        "aacute": [
+            {
+                "legacyCodepoints": [
+                    "135"
+                ],
+                "codepoint": "U+00E1",
+                "description": ""
+            }
+        ],
+        "aring": [
+            {
+                "legacyCodepoints": [
+                    "136"
+                ],
+                "codepoint": "U+00E5",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "140"
+                ],
+                "codepoint": "U+00E5",
+                "description": ""
+            }
+        ],
+        "acircumflex": [
+            {
+                "legacyCodepoints": [
+                    "137"
+                ],
+                "codepoint": "U+00E2",
+                "description": ""
+            }
+        ],
+        "adieresis": [
+            {
+                "legacyCodepoints": [
+                    "138"
+                ],
+                "codepoint": "U+00E4",
+                "description": ""
+            }
+        ],
+        "atilde": [
+            {
+                "legacyCodepoints": [
+                    "139"
+                ],
+                "codepoint": "U+00E3",
+                "description": ""
+            }
+        ],
+        "ccedilla": [
+            {
+                "legacyCodepoints": [
+                    "141"
+                ],
+                "codepoint": "U+00E7",
+                "description": ""
+            }
+        ],
+        "eacute": [
+            {
+                "legacyCodepoints": [
+                    "142"
+                ],
+                "codepoint": "U+00E9",
+                "description": ""
+            }
+        ],
+        "edieresis": [
+            {
+                "legacyCodepoints": [
+                    "143"
+                ],
+                "codepoint": "U+00EB",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "145"
+                ],
+                "codepoint": "U+00EB",
+                "description": ""
+            }
+        ],
+        "ecircumflex": [
+            {
+                "legacyCodepoints": [
+                    "144"
+                ],
+                "codepoint": "U+00EA",
+                "description": ""
+            }
+        ],
+        "acute": [
+            {
+                "legacyCodepoints": [
+                    "146"
+                ],
+                "codepoint": "U+00B4",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "171"
+                ],
+                "codepoint": "U+00B4",
+                "description": ""
+            }
+        ],
+        "circumflex": [
+            {
+                "legacyCodepoints": [
+                    "148"
+                ],
+                "codepoint": "U+02C6",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "246"
+                ],
+                "codepoint": "U+02C6",
+                "description": ""
+            }
+        ],
+        "dieresis": [
+            {
+                "legacyCodepoints": [
+                    "149"
+                ],
+                "codepoint": "U+00A8",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "172"
+                ],
+                "codepoint": "U+00A8",
+                "description": ""
+            }
+        ],
+        "ntilde": [
+            {
+                "legacyCodepoints": [
+                    "150"
+                ],
+                "codepoint": "U+00F1",
+                "description": ""
+            }
+        ],
+        "oacute": [
+            {
+                "legacyCodepoints": [
+                    "151"
+                ],
+                "codepoint": "U+00F3",
+                "description": ""
+            }
+        ],
+        "odieresis": [
+            {
+                "legacyCodepoints": [
+                    "152"
+                ],
+                "codepoint": "U+00F6",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "154"
+                ],
+                "codepoint": "U+00F6",
+                "description": ""
+            }
+        ],
+        "ocircumflex": [
+            {
+                "legacyCodepoints": [
+                    "153"
+                ],
+                "codepoint": "U+00F4",
+                "description": ""
+            }
+        ],
+        "otilde": [
+            {
+                "legacyCodepoints": [
+                    "155"
+                ],
+                "codepoint": "U+00F5",
+                "description": ""
+            }
+        ],
+        "uacute": [
+            {
+                "legacyCodepoints": [
+                    "156"
+                ],
+                "codepoint": "U+00FA",
+                "description": ""
+            }
+        ],
+        "uring": [
+            {
+                "legacyCodepoints": [
+                    "157"
+                ],
+                "codepoint": "U+016F",
+                "description": ""
+            }
+        ],
+        "ucircumflex": [
+            {
+                "legacyCodepoints": [
+                    "158"
+                ],
+                "codepoint": "U+00FB",
+                "description": ""
+            }
+        ],
+        "udieresis": [
+            {
+                "legacyCodepoints": [
+                    "159"
+                ],
+                "codepoint": "U+00FC",
+                "description": ""
+            }
+        ],
+        "registered": [
+            {
+                "legacyCodepoints": [
+                    "168"
+                ],
+                "codepoint": "U+00AE",
+                "description": ""
+            }
+        ],
+        "trademark": [
+            {
+                "legacyCodepoints": [
+                    "170"
+                ],
+                "codepoint": "U+2122",
+                "description": ""
+            }
+        ],
+        "Atilde": [
+            {
+                "legacyCodepoints": [
+                    "204"
+                ],
+                "codepoint": "U+00C3",
+                "description": ""
+            }
+        ],
+        "Otilde": [
+            {
+                "legacyCodepoints": [
+                    "205"
+                ],
+                "codepoint": "U+00D5",
+                "description": ""
+            }
+        ],
+        "quoteblleft": [
+            {
+                "legacyCodepoints": [
+                    "210"
+                ],
+                "codepoint": "U+201C",
+                "description": ""
+            }
+        ],
+        "quoteblright": [
+            {
+                "legacyCodepoints": [
+                    "211"
+                ],
+                "codepoint": "U+201D",
+                "description": ""
+            }
+        ],
+        "quoteleft": [
+            {
+                "legacyCodepoints": [
+                    "212"
+                ],
+                "codepoint": "U+2018",
+                "description": ""
+            }
+        ],
+        "quoteright": [
+            {
+                "legacyCodepoints": [
+                    "213"
+                ],
+                "codepoint": "U+2019",
+                "description": ""
+            }
+        ],
+        "ydieresis": [
+            {
+                "legacyCodepoints": [
+                    "216"
+                ],
+                "codepoint": "U+00FF",
+                "description": ""
+            }
+        ],
+        "Ydieresis": [
+            {
+                "legacyCodepoints": [
+                    "217"
+                ],
+                "codepoint": "U+0178",
+                "description": ""
+            }
+        ],
+        "periodcentered": [
+            {
+                "legacyCodepoints": [
+                    "225"
+                ],
+                "codepoint": "U+0087",
+                "description": ""
+            }
+        ],
+        "quotesinglbase": [
+            {
+                "legacyCodepoints": [
+                    "226"
+                ],
+                "codepoint": "U+201A",
+                "description": ""
+            }
+        ],
+        "Acircumflex": [
+            {
+                "legacyCodepoints": [
+                    "229"
+                ],
+                "codepoint": "U+00C2",
+                "description": ""
+            }
+        ],
+        "Ecircumflex": [
+            {
+                "legacyCodepoints": [
+                    "230"
+                ],
+                "codepoint": "U+00CA",
+                "description": ""
+            }
+        ],
+        "Aacute": [
+            {
+                "legacyCodepoints": [
+                    "231"
+                ],
+                "codepoint": "U+00C1",
+                "description": ""
+            }
+        ],
+        "Edieresis": [
+            {
+                "legacyCodepoints": [
+                    "232"
+                ],
+                "codepoint": "U+00CB",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "233"
+                ],
+                "codepoint": "U+00CB",
+                "description": ""
+            }
+        ],
+        "Iacute": [
+            {
+                "legacyCodepoints": [
+                    "234"
+                ],
+                "codepoint": "U+00CD",
+                "description": ""
+            }
+        ],
+        "Icircumflex": [
+            {
+                "legacyCodepoints": [
+                    "235"
+                ],
+                "codepoint": "U+00CE",
+                "description": ""
+            }
+        ],
+        "Idieresis": [
+            {
+                "legacyCodepoints": [
+                    "236"
+                ],
+                "codepoint": "U+00CF",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "237"
+                ],
+                "codepoint": "U+00CF",
+                "description": ""
+            }
+        ],
+        "Oacute": [
+            {
+                "legacyCodepoints": [
+                    "238"
+                ],
+                "codepoint": "U+00D3",
+                "description": ""
+            }
+        ],
+        "Ocircumflex": [
+            {
+                "legacyCodepoints": [
+                    "239"
+                ],
+                "codepoint": "U+00D4",
+                "description": ""
+            }
+        ],
+        "Uacute": [
+            {
+                "legacyCodepoints": [
+                    "242"
+                ],
+                "codepoint": "U+00DA",
+                "description": ""
+            }
+        ],
+        "Ucircumflex": [
+            {
+                "legacyCodepoints": [
+                    "243"
+                ],
+                "codepoint": "U+00DB",
+                "description": ""
+            }
+        ],
+        "Uring": [
+            {
+                "legacyCodepoints": [
+                    "244"
+                ],
+                "codepoint": "U+016E",
+                "description": ""
+            }
+        ],
+        "tilde": [
+            {
+                "legacyCodepoints": [
+                    "247"
+                ],
+                "codepoint": "U+02DC",
+                "description": ""
+            }
+        ],
+        "cedilla": [
+            {
+                "legacyCodepoints": [
+                    "252"
+                ],
+                "codepoint": "U+00B8",
+                "description": ""
+            }
+        ]
+    }
 }

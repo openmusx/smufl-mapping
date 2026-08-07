@@ -1,9 +1,17 @@
 {
-  "glyphDuplicateArray": [
-    {
-      "legacyCodepoints": ["0x2B", "0x30", "0x2B"],
-      "codepoint": "U+E010",
-      "description": "Array contains duplicate legacy codepoints"
-    }
-  ]
+  "fontMetadata": {
+    "fontType": "engraving",
+    "fontStyle": "engraved",
+    "smuflSuccessorFont": "Finale Maestro",
+    "staffSpacesPerEm": 4.0
+  },
+  "glyphs": {
+    "glyphDuplicateArray": [
+      {
+        "legacyCodepoints": ["0x2B", "0x30", "0x2B"],
+        "codepoint": "U+E010",
+        "description": "Array contains duplicate legacy codepoints"
+      }
+    ]
+  }
 }

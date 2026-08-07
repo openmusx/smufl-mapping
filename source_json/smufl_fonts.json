@@ -1,0 +1,170 @@
+{
+    "Bravura": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (4.000)."
+    },
+    "Bravura Text": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 5.0,
+        "sizeNotes": "Follows the SMuFL text-font convention of five staff spaces per em, so a point size is NOT interchangeable with a music face. Confirmed by the staff5Lines anchor (4.998)."
+    },
+    "Chaconne Ex": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Not available locally, so unverified by measurement."
+    },
+    "Emmentaler": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. MuseScore ships this font under the internal family name 'MScore', apparently to avoid colliding with a separately installed copy, and stores that name in score styles while showing the display name in its font menu. Its SMuFL metadata declares fontName 'Emmentaler'. Measured from that copy."
+    },
+    "Emmentaler Text": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Sits on the music em scale at four staff spaces per em rather than the five used by Bravura Text, so a point size is interchangeable with its music face. 319 measurements against Emmentaler fall within 1% of this convention, versus 2 for five. MuseScore ships this font under the internal family name 'MScore Text', apparently to avoid colliding with a separately installed copy, and stores that name in score styles while showing the display name in its font menu."
+    },
+    "Finale Ash": {
+        "fontType": "engraving",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (4.019)."
+    },
+    "Finale Ash Text": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": null,
+        "sizeNotes": "Only 4 glyphs are shared with Finale Ash and none supports either convention."
+    },
+    "Finale Broadway": {
+        "fontType": "engraving",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (4.019)."
+    },
+    "Finale Broadway Legacy Text": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Sits on the music em scale at four staff spaces per em rather than the five used by Bravura Text, so a point size is interchangeable with its music face. All 64 measurements against Finale Broadway match exactly."
+    },
+    "Finale Broadway Text": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Sits on the music em scale at four staff spaces per em rather than the five used by Bravura Text, so a point size is interchangeable with its music face. 14 measurements fall within 1% of this against Finale Broadway and none within 1% of five spaces per em."
+    },
+    "Finale Engraver": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (3.996)."
+    },
+    "Finale Jazz": {
+        "fontType": "engraving",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (4.019)."
+    },
+    "Finale Jazz Text": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Sits on the music em scale at four staff spaces per em rather than the five used by Bravura Text, so a point size is interchangeable with its music face. All 82 measurements against Finale Jazz match exactly."
+    },
+    "Finale Jazz Text Lowercase": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Sits on the music em scale at four staff spaces per em rather than the five used by Bravura Text, so a point size is interchangeable with its music face. All 82 measurements against Finale Jazz match exactly."
+    },
+    "Finale Legacy": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (3.996)."
+    },
+    "Finale Maestro": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (4.047)."
+    },
+    "Finale Maestro Text": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Sits on the music em scale at four staff spaces per em rather than the five used by Bravura Text, so a point size is interchangeable with its music face. 50 measurements fall within 1% of this against Finale Maestro, versus 2 for five spaces per em."
+    },
+    "Gonville": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. MuseScore ships this font under the internal family name 'Gootville', apparently to avoid colliding with a separately installed copy, and stores that name in score styles while showing the display name in its font menu. Measured from that copy."
+    },
+    "Gonville Text": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 5.0,
+        "sizeNotes": "Follows the SMuFL text-font convention of five staff spaces per em, so a point size is NOT interchangeable with a music face. 482 measurements against Gonville fall within 1% of this convention, versus 24 for four. MuseScore ships this font under the internal family name 'Gootville Text', apparently to avoid colliding with a separately installed copy, and stores that name in score styles while showing the display name in its font menu."
+    },
+    "Leland": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. The font maps no staff5Lines glyph, so the value rests on the specification."
+    },
+    "Leland Text": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 5.0,
+        "sizeNotes": "Follows the SMuFL text-font convention of five staff spaces per em, so a point size is NOT interchangeable with a music face. 23 measurements fall within 1% of this convention against Leland and none within 1% of four spaces per em."
+    },
+    "MuseJazz": {
+        "fontType": "engraving",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. MuseScore's handwritten face; the handwritten classification matches denigma's existing MusicXmlFontFamilyFallback entry."
+    },
+    "MuseJazz Text": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 5.0,
+        "sizeNotes": "Follows the SMuFL text-font convention of five staff spaces per em, so a point size is NOT interchangeable with a music face. 629 measurements against MuseJazz fall within 1% of this convention and none within 1% of four."
+    },
+    "Petaluma": {
+        "fontType": "engraving",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. The font maps no staff5Lines glyph, so the value rests on the specification."
+    },
+    "Petaluma Script": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": null,
+        "sizeNotes": "Shares no SMuFL codepoints with Petaluma, leaving nothing to measure against."
+    },
+    "Petaluma Text": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "staffSpacesPerEm": 5.0,
+        "sizeNotes": "Follows the SMuFL text-font convention of five staff spaces per em, so a point size is NOT interchangeable with a music face. Dominant scale against Petaluma is 1.250 in 35% of measurements."
+    },
+    "Sebastian": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "A SMuFL music font spans four staff spaces per em by definition. Confirmed by the staff5Lines anchor (4.000)."
+    },
+    "Sebastian Text": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "staffSpacesPerEm": 5.0,
+        "sizeNotes": "Follows the SMuFL text-font convention of five staff spaces per em, so a point size is NOT interchangeable with a music face. Confirmed by the staff5Lines anchor (4.998)."
+    }
+}

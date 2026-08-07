@@ -1,0 +1,11 @@
+{
+    "fontMetadata": {
+        "fontType": "engraving",
+        "fontStyle": "handwritten",
+        "smuflSuccessorFont": "Finale Ash",
+        "successorNotes": "No glyph mappings are available for this font: the record exists so that a client substituting a modern face can still resolve a successor. The successor is unverified by measurement, as the legacy font is not installed here, though Finale Ash is.",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Recorded from published information about the font rather than measured; the legacy font was not available locally."
+    },
+    "glyphs": {}
+}

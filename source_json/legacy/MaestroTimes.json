@@ -1,478 +1,488 @@
 {
-    "accidentalDoubleFlat": [
-        {
-            "legacyCodepoints": [
-                "8730"
-            ],
-            "codepoint": "U+E264",
-            "description": ""
-        }
-    ],
-    "accidentalDoubleSharp": [
-        {
-            "legacyCodepoints": [
-                "207"
-            ],
-            "codepoint": "U+E263",
-            "description": ""
-        }
-    ],
-    "accidentalFlat": [
-        {
-            "legacyCodepoints": [
-                "175"
-            ],
-            "codepoint": "U+E260",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "713"
-            ],
-            "codepoint": "U+E260",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61688"
-            ],
-            "codepoint": "U+E260",
-            "description": ""
-        }
-    ],
-    "accidentalNatural": [
-        {
-            "legacyCodepoints": [
-                "206"
-            ],
-            "codepoint": "U+E261",
-            "description": ""
-        }
-    ],
-    "accidentalSharp": [
-        {
-            "legacyCodepoints": [
-                "732"
-            ],
-            "codepoint": "U+E262",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61687"
-            ],
-            "codepoint": "U+E262",
-            "description": ""
-        }
-    ],
-    "csymAugmented": [
-        {
-            "legacyCodepoints": [
-                "177"
-            ],
-            "codepoint": "U+E872",
-            "description": ""
-        }
-    ],
-    "dynamicFFF": [
-        {
-            "legacyCodepoints": [
-                "181"
-            ],
-            "codepoint": "U+E530",
-            "description": ""
-        }
-    ],
-    "dynamicPP": [
-        {
-            "legacyCodepoints": [
-                "248"
-            ],
-            "codepoint": "U+E52B",
-            "description": ""
-        }
-    ],
-    "dynamicPPP": [
-        {
-            "legacyCodepoints": [
-                "172"
-            ],
-            "codepoint": "U+E52A",
-            "description": ""
-        }
-    ],
-    "dynamicRinforzando": [
-        {
-            "legacyCodepoints": [
-                "171"
-            ],
-            "codepoint": "U+E523",
-            "description": ""
-        }
-    ],
-    "dynamicZ": [
-        {
-            "legacyCodepoints": [
-                "165"
-            ],
-            "codepoint": "U+E525",
-            "description": ""
-        }
-    ],
-    "elission": [
-        {
-            "legacyCodepoints": [
-                "200"
-            ],
-            "codepoint": "U+035C",
-            "description": ""
-        }
-    ],
-    "fClef": [
-        {
-            "legacyCodepoints": [
-                "184"
-            ],
-            "codepoint": "U+E062",
-            "description": ""
-        }
-    ],
-    "figbassBracketLeft": [
-        {
-            "legacyCodepoints": [
-                "167"
-            ],
-            "codepoint": "U+EA68",
-            "description": ""
-        }
-    ],
-    "figbassBracketRight": [
-        {
-            "legacyCodepoints": [
-                "182"
-            ],
-            "codepoint": "U+EA69",
-            "description": ""
-        }
-    ],
-    "figbassParensLeft": [
-        {
-            "legacyCodepoints": [
-                "170"
-            ],
-            "codepoint": "U+EA6A",
-            "description": ""
-        }
-    ],
-    "figbassParensRight": [
-        {
-            "legacyCodepoints": [
-                "186"
-            ],
-            "codepoint": "U+EA6B",
-            "description": ""
-        }
-    ],
-    "metAugmentationDot": [
-        {
-            "legacyCodepoints": [
-                "191"
-            ],
-            "codepoint": "U+ECB7",
-            "description": ""
-        }
-    ],
-    "metNote16thUp": [
-        {
-            "legacyCodepoints": [
-                "217"
-            ],
-            "codepoint": "U+ECA9",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61684"
-            ],
-            "codepoint": "U+ECA9",
-            "description": ""
-        }
-    ],
-    "metNote32ndUp": [
-        {
-            "legacyCodepoints": [
-                "219"
-            ],
-            "codepoint": "U+ECAB",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61683"
-            ],
-            "codepoint": "U+ECAB",
-            "description": ""
-        }
-    ],
-    "metNote64thUp": [
-        {
-            "legacyCodepoints": [
-                "204"
-            ],
-            "codepoint": "U+ECAD",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61677"
-            ],
-            "codepoint": "U+ECAD",
-            "description": ""
-        }
-    ],
-    "metNote8thUp": [
-        {
-            "legacyCodepoints": [
-                "61668"
-            ],
-            "codepoint": "U+ECA7",
-            "description": ""
-        }
-    ],
-    "metNoteDoubleWhole": [
-        {
-            "legacyCodepoints": [
-                "710"
-            ],
-            "codepoint": "U+ECA0",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61686"
-            ],
-            "codepoint": "U+ECA0",
-            "description": ""
-        }
-    ],
-    "metNoteDoubleWholeSquare": [
-        {
-            "legacyCodepoints": [
-                "305"
-            ],
-            "codepoint": "U+ECA1",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61685"
-            ],
-            "codepoint": "U+ECA1",
-            "description": ""
-        }
-    ],
-    "metNoteHalfUp": [
-        {
-            "legacyCodepoints": [
-                "211"
-            ],
-            "codepoint": "U+ECA3",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61678"
-            ],
-            "codepoint": "U+ECA3",
-            "description": ""
-        }
-    ],
-    "metNoteQuarterUp": [
-        {
-            "legacyCodepoints": [
-                "338"
-            ],
-            "codepoint": "U+ECA5",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "61646"
-            ],
-            "codepoint": "U+ECA5",
-            "description": ""
-        }
-    ],
-    "metNoteWhole": [
-        {
-            "legacyCodepoints": [
-                "61667"
-            ],
-            "codepoint": "U+ECA2",
-            "description": ""
-        }
-    ],
-    "metricModulationArrowLeft": [
-        {
-            "legacyCodepoints": [
-                "218"
-            ],
-            "codepoint": "U+EC63",
-            "description": ""
-        }
-    ],
-    "metricModulationArrowRight": [
-        {
-            "legacyCodepoints": [
-                "198"
-            ],
-            "codepoint": "U+EC64",
-            "description": ""
-        }
-    ],
-    "ottava": [
-        {
-            "legacyCodepoints": [
-                "176"
-            ],
-            "codepoint": "U+E510",
-            "description": ""
-        }
-    ],
-    "rest16th": [
-        {
-            "legacyCodepoints": [
-                "197"
-            ],
-            "codepoint": "U+E4E7",
-            "description": ""
-        }
-    ],
-    "rest8th": [
-        {
-            "legacyCodepoints": [
-                "210"
-            ],
-            "codepoint": "U+E4E6",
-            "description": ""
-        }
-    ],
-    "restQuarter": [
-        {
-            "legacyCodepoints": [
-                "212"
-            ],
-            "codepoint": "U+E4E5",
-            "description": ""
-        }
-    ],
-    "textBlackNoteFrac16thLongBeam": [
-        {
-            "legacyCodepoints": [
-                "202"
-            ],
-            "codepoint": "U+F7D4",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        },
-        {
-            "legacyCodepoints": [
-                "61670"
-            ],
-            "codepoint": "U+F7D4",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        }
-    ],
-    "textBlackNoteFrac32ndLongBeam": [
-        {
-            "legacyCodepoints": [
-                "193"
-            ],
-            "codepoint": "U+F7D5",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        },
-        {
-            "legacyCodepoints": [
-                "61671"
-            ],
-            "codepoint": "U+F7D5",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        }
-    ],
-    "textBlackNoteFrac8thLongBeam": [
-        {
-            "legacyCodepoints": [
-                "194"
-            ],
-            "codepoint": "U+F7D3",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        },
-        {
-            "legacyCodepoints": [
-                "61669"
-            ],
-            "codepoint": "U+F7D3",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        }
-    ],
-    "textBlackNoteFracSingle16th": [
-        {
-            "legacyCodepoints": [
-                "203"
-            ],
-            "codepoint": "U+F7D6",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        },
-        {
-            "legacyCodepoints": [
-                "61672"
-            ],
-            "codepoint": "U+F7D6",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        }
-    ],
-    "textBlackNoteMiddleTripletNote": [
-        {
-            "legacyCodepoints": [
-                "205"
-            ],
-            "codepoint": "U+F7CB",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        },
-        {
-            "legacyCodepoints": [
-                "61674"
-            ],
-            "codepoint": "U+F7CB",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        }
-    ],
-    "textTripletBracketFull": [
-        {
-            "legacyCodepoints": [
-                "199"
-            ],
-            "codepoint": "U+F7D2",
-            "description": "",
-            "smuflFontName": "Finale Maestro Text"
-        }
-    ],
-    "tuplet9": [
-        {
-            "legacyCodepoints": [
-                "183"
-            ],
-            "codepoint": "U+E889",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": "Finale Maestro Text",
+        "successorNotes": "The text face carrying these designs: 22% of size measurements match exactly and it is the best aspect-ratio match.",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Measured against Finale Maestro Text, which is itself 4.0 staff spaces per em; 24 of 108 measurements match exactly. Its outlines were reused into the SMuFL text face rather than a music face."
+    },
+    "glyphs": {
+        "accidentalDoubleFlat": [
+            {
+                "legacyCodepoints": [
+                    "8730"
+                ],
+                "codepoint": "U+E264",
+                "description": ""
+            }
+        ],
+        "accidentalDoubleSharp": [
+            {
+                "legacyCodepoints": [
+                    "207"
+                ],
+                "codepoint": "U+E263",
+                "description": ""
+            }
+        ],
+        "accidentalFlat": [
+            {
+                "legacyCodepoints": [
+                    "175"
+                ],
+                "codepoint": "U+E260",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "713"
+                ],
+                "codepoint": "U+E260",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61688"
+                ],
+                "codepoint": "U+E260",
+                "description": ""
+            }
+        ],
+        "accidentalNatural": [
+            {
+                "legacyCodepoints": [
+                    "206"
+                ],
+                "codepoint": "U+E261",
+                "description": ""
+            }
+        ],
+        "accidentalSharp": [
+            {
+                "legacyCodepoints": [
+                    "732"
+                ],
+                "codepoint": "U+E262",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61687"
+                ],
+                "codepoint": "U+E262",
+                "description": ""
+            }
+        ],
+        "csymAugmented": [
+            {
+                "legacyCodepoints": [
+                    "177"
+                ],
+                "codepoint": "U+E872",
+                "description": ""
+            }
+        ],
+        "dynamicFFF": [
+            {
+                "legacyCodepoints": [
+                    "181"
+                ],
+                "codepoint": "U+E530",
+                "description": ""
+            }
+        ],
+        "dynamicPP": [
+            {
+                "legacyCodepoints": [
+                    "248"
+                ],
+                "codepoint": "U+E52B",
+                "description": ""
+            }
+        ],
+        "dynamicPPP": [
+            {
+                "legacyCodepoints": [
+                    "172"
+                ],
+                "codepoint": "U+E52A",
+                "description": ""
+            }
+        ],
+        "dynamicRinforzando": [
+            {
+                "legacyCodepoints": [
+                    "171"
+                ],
+                "codepoint": "U+E523",
+                "description": ""
+            }
+        ],
+        "dynamicZ": [
+            {
+                "legacyCodepoints": [
+                    "165"
+                ],
+                "codepoint": "U+E525",
+                "description": ""
+            }
+        ],
+        "elission": [
+            {
+                "legacyCodepoints": [
+                    "200"
+                ],
+                "codepoint": "U+035C",
+                "description": ""
+            }
+        ],
+        "fClef": [
+            {
+                "legacyCodepoints": [
+                    "184"
+                ],
+                "codepoint": "U+E062",
+                "description": ""
+            }
+        ],
+        "figbassBracketLeft": [
+            {
+                "legacyCodepoints": [
+                    "167"
+                ],
+                "codepoint": "U+EA68",
+                "description": ""
+            }
+        ],
+        "figbassBracketRight": [
+            {
+                "legacyCodepoints": [
+                    "182"
+                ],
+                "codepoint": "U+EA69",
+                "description": ""
+            }
+        ],
+        "figbassParensLeft": [
+            {
+                "legacyCodepoints": [
+                    "170"
+                ],
+                "codepoint": "U+EA6A",
+                "description": ""
+            }
+        ],
+        "figbassParensRight": [
+            {
+                "legacyCodepoints": [
+                    "186"
+                ],
+                "codepoint": "U+EA6B",
+                "description": ""
+            }
+        ],
+        "metAugmentationDot": [
+            {
+                "legacyCodepoints": [
+                    "191"
+                ],
+                "codepoint": "U+ECB7",
+                "description": ""
+            }
+        ],
+        "metNote16thUp": [
+            {
+                "legacyCodepoints": [
+                    "217"
+                ],
+                "codepoint": "U+ECA9",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61684"
+                ],
+                "codepoint": "U+ECA9",
+                "description": ""
+            }
+        ],
+        "metNote32ndUp": [
+            {
+                "legacyCodepoints": [
+                    "219"
+                ],
+                "codepoint": "U+ECAB",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61683"
+                ],
+                "codepoint": "U+ECAB",
+                "description": ""
+            }
+        ],
+        "metNote64thUp": [
+            {
+                "legacyCodepoints": [
+                    "204"
+                ],
+                "codepoint": "U+ECAD",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61677"
+                ],
+                "codepoint": "U+ECAD",
+                "description": ""
+            }
+        ],
+        "metNote8thUp": [
+            {
+                "legacyCodepoints": [
+                    "61668"
+                ],
+                "codepoint": "U+ECA7",
+                "description": ""
+            }
+        ],
+        "metNoteDoubleWhole": [
+            {
+                "legacyCodepoints": [
+                    "710"
+                ],
+                "codepoint": "U+ECA0",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61686"
+                ],
+                "codepoint": "U+ECA0",
+                "description": ""
+            }
+        ],
+        "metNoteDoubleWholeSquare": [
+            {
+                "legacyCodepoints": [
+                    "305"
+                ],
+                "codepoint": "U+ECA1",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61685"
+                ],
+                "codepoint": "U+ECA1",
+                "description": ""
+            }
+        ],
+        "metNoteHalfUp": [
+            {
+                "legacyCodepoints": [
+                    "211"
+                ],
+                "codepoint": "U+ECA3",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61678"
+                ],
+                "codepoint": "U+ECA3",
+                "description": ""
+            }
+        ],
+        "metNoteQuarterUp": [
+            {
+                "legacyCodepoints": [
+                    "338"
+                ],
+                "codepoint": "U+ECA5",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "61646"
+                ],
+                "codepoint": "U+ECA5",
+                "description": ""
+            }
+        ],
+        "metNoteWhole": [
+            {
+                "legacyCodepoints": [
+                    "61667"
+                ],
+                "codepoint": "U+ECA2",
+                "description": ""
+            }
+        ],
+        "metricModulationArrowLeft": [
+            {
+                "legacyCodepoints": [
+                    "218"
+                ],
+                "codepoint": "U+EC63",
+                "description": ""
+            }
+        ],
+        "metricModulationArrowRight": [
+            {
+                "legacyCodepoints": [
+                    "198"
+                ],
+                "codepoint": "U+EC64",
+                "description": ""
+            }
+        ],
+        "ottava": [
+            {
+                "legacyCodepoints": [
+                    "176"
+                ],
+                "codepoint": "U+E510",
+                "description": ""
+            }
+        ],
+        "rest16th": [
+            {
+                "legacyCodepoints": [
+                    "197"
+                ],
+                "codepoint": "U+E4E7",
+                "description": ""
+            }
+        ],
+        "rest8th": [
+            {
+                "legacyCodepoints": [
+                    "210"
+                ],
+                "codepoint": "U+E4E6",
+                "description": ""
+            }
+        ],
+        "restQuarter": [
+            {
+                "legacyCodepoints": [
+                    "212"
+                ],
+                "codepoint": "U+E4E5",
+                "description": ""
+            }
+        ],
+        "textBlackNoteFrac16thLongBeam": [
+            {
+                "legacyCodepoints": [
+                    "202"
+                ],
+                "codepoint": "U+F7D4",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            },
+            {
+                "legacyCodepoints": [
+                    "61670"
+                ],
+                "codepoint": "U+F7D4",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            }
+        ],
+        "textBlackNoteFrac32ndLongBeam": [
+            {
+                "legacyCodepoints": [
+                    "193"
+                ],
+                "codepoint": "U+F7D5",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            },
+            {
+                "legacyCodepoints": [
+                    "61671"
+                ],
+                "codepoint": "U+F7D5",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            }
+        ],
+        "textBlackNoteFrac8thLongBeam": [
+            {
+                "legacyCodepoints": [
+                    "194"
+                ],
+                "codepoint": "U+F7D3",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            },
+            {
+                "legacyCodepoints": [
+                    "61669"
+                ],
+                "codepoint": "U+F7D3",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            }
+        ],
+        "textBlackNoteFracSingle16th": [
+            {
+                "legacyCodepoints": [
+                    "203"
+                ],
+                "codepoint": "U+F7D6",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            },
+            {
+                "legacyCodepoints": [
+                    "61672"
+                ],
+                "codepoint": "U+F7D6",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            }
+        ],
+        "textBlackNoteMiddleTripletNote": [
+            {
+                "legacyCodepoints": [
+                    "205"
+                ],
+                "codepoint": "U+F7CB",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            },
+            {
+                "legacyCodepoints": [
+                    "61674"
+                ],
+                "codepoint": "U+F7CB",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            }
+        ],
+        "textTripletBracketFull": [
+            {
+                "legacyCodepoints": [
+                    "199"
+                ],
+                "codepoint": "U+F7D2",
+                "description": "",
+                "smuflFontName": "Finale Maestro Text"
+            }
+        ],
+        "tuplet9": [
+            {
+                "legacyCodepoints": [
+                    "183"
+                ],
+                "codepoint": "U+E889",
+                "description": ""
+            }
+        ]
+    }
 }

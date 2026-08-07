@@ -1,92 +1,102 @@
 {
-    "accidentalFlat": [
-        {
-            "legacyCodepoints": [
-                "33"
-            ],
-            "codepoint": "U+E260",
-            "description": ""
-        }
-    ],
-    "accidentalNatural": [
-        {
-            "legacyCodepoints": [
-                "34"
-            ],
-            "codepoint": "U+E261",
-            "description": ""
-        }
-    ],
-    "accidentalSharp": [
-        {
-            "legacyCodepoints": [
-                "35"
-            ],
-            "codepoint": "U+E262",
-            "description": ""
-        }
-    ],
-    "csymAugmented": [
-        {
-            "legacyCodepoints": [
-                "43"
-            ],
-            "codepoint": "U+E872",
-            "description": ""
-        }
-    ],
-    "csymMinor": [
-        {
-            "legacyCodepoints": [
-                "45"
-            ],
-            "codepoint": "U+E874",
-            "description": ""
-        }
-    ],
-    "csymParensLeftTall": [
-        {
-            "legacyCodepoints": [
-                "60"
-            ],
-            "codepoint": "U+E875",
-            "description": ""
-        }
-    ],
-    "csymParensRightTall": [
-        {
-            "legacyCodepoints": [
-                "62"
-            ],
-            "codepoint": "U+E876",
-            "description": ""
-        }
-    ],
-    "csymMajorSeventh": [
-        {
-            "legacyCodepoints": [
-                "64"
-            ],
-            "codepoint": "U+E873",
-            "description": ""
-        }
-    ],
-    "csymDiminished": [
-        {
-            "legacyCodepoints": [
-                "181"
-            ],
-            "codepoint": "U+E870",
-            "description": ""
-        }
-    ],
-    "csymHalfDiminished": [
-        {
-            "legacyCodepoints": [
-                "187"
-            ],
-            "codepoint": "U+E871",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "smuflSuccessorFont": null,
+        "successorNotes": "No candidate face shares its designs; only 8 glyphs are comparable.",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Median lands exactly on 4.0 but only 3 of 20 measurements match exactly, as the font maps just 10 glyphs. Consistent with the rest of the Jazz family."
+    },
+    "glyphs": {
+        "accidentalFlat": [
+            {
+                "legacyCodepoints": [
+                    "33"
+                ],
+                "codepoint": "U+E260",
+                "description": ""
+            }
+        ],
+        "accidentalNatural": [
+            {
+                "legacyCodepoints": [
+                    "34"
+                ],
+                "codepoint": "U+E261",
+                "description": ""
+            }
+        ],
+        "accidentalSharp": [
+            {
+                "legacyCodepoints": [
+                    "35"
+                ],
+                "codepoint": "U+E262",
+                "description": ""
+            }
+        ],
+        "csymAugmented": [
+            {
+                "legacyCodepoints": [
+                    "43"
+                ],
+                "codepoint": "U+E872",
+                "description": ""
+            }
+        ],
+        "csymMinor": [
+            {
+                "legacyCodepoints": [
+                    "45"
+                ],
+                "codepoint": "U+E874",
+                "description": ""
+            }
+        ],
+        "csymParensLeftTall": [
+            {
+                "legacyCodepoints": [
+                    "60"
+                ],
+                "codepoint": "U+E875",
+                "description": ""
+            }
+        ],
+        "csymParensRightTall": [
+            {
+                "legacyCodepoints": [
+                    "62"
+                ],
+                "codepoint": "U+E876",
+                "description": ""
+            }
+        ],
+        "csymMajorSeventh": [
+            {
+                "legacyCodepoints": [
+                    "64"
+                ],
+                "codepoint": "U+E873",
+                "description": ""
+            }
+        ],
+        "csymDiminished": [
+            {
+                "legacyCodepoints": [
+                    "181"
+                ],
+                "codepoint": "U+E870",
+                "description": ""
+            }
+        ],
+        "csymHalfDiminished": [
+            {
+                "legacyCodepoints": [
+                    "187"
+                ],
+                "codepoint": "U+E871",
+                "description": ""
+            }
+        ]
+    }
 }

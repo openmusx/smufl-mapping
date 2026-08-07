@@ -1,48 +1,58 @@
 {
-    "enclosureClosed": [
-        {
-            "legacyCodepoints": [
-                "94"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F74A",
-            "description": ""
-        }
-    ],
-    "csymParensLeftTall": [
-        {
-            "legacyCodepoints": [
-                "123"
-            ],
-            "codepoint": "U+E875",
-            "description": ""
-        }
-    ],
-    "csymHalfDiminished": [
-        {
-            "legacyCodepoints": [
-                "124"
-            ],
-            "codepoint": "U+E871",
-            "description": ""
-        }
-    ],
-    "csymParensRightTall": [
-        {
-            "legacyCodepoints": [
-                "125"
-            ],
-            "codepoint": "U+E876",
-            "description": ""
-        }
-    ],
-    "colon": [
-        {
-            "legacyCodepoints": [
-                "247"
-            ],
-            "codepoint": "U+003A",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "handwritten",
+        "smuflSuccessorFont": null,
+        "successorNotes": "Only 5 glyphs are mapped and none matches any candidate face by aspect ratio, so no successor could be established despite the font being an extension of Broadway Copyist Text.",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Only 5 glyphs are mapped, so the outline-reuse signal is weak (measurements at 3.997 and 4.005). Value follows the rest of the Broadway Copyist family, which measures 4.0 conclusively."
+    },
+    "glyphs": {
+        "enclosureClosed": [
+            {
+                "legacyCodepoints": [
+                    "94"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F74A",
+                "description": ""
+            }
+        ],
+        "csymParensLeftTall": [
+            {
+                "legacyCodepoints": [
+                    "123"
+                ],
+                "codepoint": "U+E875",
+                "description": ""
+            }
+        ],
+        "csymHalfDiminished": [
+            {
+                "legacyCodepoints": [
+                    "124"
+                ],
+                "codepoint": "U+E871",
+                "description": ""
+            }
+        ],
+        "csymParensRightTall": [
+            {
+                "legacyCodepoints": [
+                    "125"
+                ],
+                "codepoint": "U+E876",
+                "description": ""
+            }
+        ],
+        "colon": [
+            {
+                "legacyCodepoints": [
+                    "247"
+                ],
+                "codepoint": "U+003A",
+                "description": ""
+            }
+        ]
+    }
 }

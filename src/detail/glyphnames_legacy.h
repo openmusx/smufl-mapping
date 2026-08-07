@@ -13,6 +13,7 @@
 
 #include "smufl_mapping.h"
 
+#include "detail/legacy/ash_music_legacy_map.h"
 #include "detail/legacy/broadway_copyist_legacy_map.h"
 #include "detail/legacy/broadway_copyist_perc_legacy_map.h"
 #include "detail/legacy/broadway_copyist_text_legacy_map.h"
@@ -47,6 +48,7 @@
 #include "detail/legacy/petrucci_legacy_map.h"
 #include "detail/legacy/pmusic_legacy_map.h"
 #include "detail/legacy/rentaro_legacy_map.h"
+#include "detail/legacy/sonata_legacy_map.h"
 #include "detail/legacy/tamburo_legacy_map.h"
 
 namespace smufl_mapping::detail {
@@ -54,44 +56,52 @@ namespace smufl_mapping::detail {
 struct LegacyFontMapping {
     const std::pair<char32_t, LegacyGlyphInfo>* table;
     std::size_t size;
+    MusicFontType fontType;
+    MusicFontStyle fontStyle;
+    std::string_view smuflSuccessorFont;
+    std::string_view successorNotes;
+    std::optional<double> staffSpacesPerEm;
+    std::string_view sizeNotes;
 };
 
 constexpr std::pair<std::string_view, LegacyFontMapping> legacyFontMappings[] = {
-    { "broadwaycopyist", {legacy::broadwayCopyistLegacyGlyphs, std::size(legacy::broadwayCopyistLegacyGlyphs)} },
-    { "broadwaycopyistperc", {legacy::broadwayCopyistPercLegacyGlyphs, std::size(legacy::broadwayCopyistPercLegacyGlyphs)} },
-    { "broadwaycopyisttext", {legacy::broadwayCopyistTextLegacyGlyphs, std::size(legacy::broadwayCopyistTextLegacyGlyphs)} },
-    { "broadwaycopyisttextext", {legacy::broadwayCopyistTextExtLegacyGlyphs, std::size(legacy::broadwayCopyistTextExtLegacyGlyphs)} },
-    { "chaconne", {legacy::chaconneLegacyGlyphs, std::size(legacy::chaconneLegacyGlyphs)} },
-    { "crescendo", {legacy::crescendoLegacyGlyphs, std::size(legacy::crescendoLegacyGlyphs)} },
-    { "engraverfontextras", {legacy::engraverFontExtrasLegacyGlyphs, std::size(legacy::engraverFontExtrasLegacyGlyphs)} },
-    { "engraverfontset", {legacy::engraverFontSetLegacyGlyphs, std::size(legacy::engraverFontSetLegacyGlyphs)} },
-    { "engravertexth", {legacy::engraverTextHLegacyGlyphs, std::size(legacy::engraverTextHLegacyGlyphs)} },
-    { "engravertextncs", {legacy::engraverTextNcsLegacyGlyphs, std::size(legacy::engraverTextNcsLegacyGlyphs)} },
-    { "engravertextt", {legacy::engraverTextTLegacyGlyphs, std::size(legacy::engraverTextTLegacyGlyphs)} },
-    { "engravertime", {legacy::engraverTimeLegacyGlyphs, std::size(legacy::engraverTimeLegacyGlyphs)} },
-    { "finalealphanotes", {legacy::finaleAlphanotesLegacyGlyphs, std::size(legacy::finaleAlphanotesLegacyGlyphs)} },
-    { "finalecopyisttext", {legacy::finaleCopyistTextLegacyGlyphs, std::size(legacy::finaleCopyistTextLegacyGlyphs)} },
-    { "finalecopyisttextext", {legacy::finaleCopyistTextExtLegacyGlyphs, std::size(legacy::finaleCopyistTextExtLegacyGlyphs)} },
-    { "finalemallets", {legacy::finaleMalletsLegacyGlyphs, std::size(legacy::finaleMalletsLegacyGlyphs)} },
-    { "finalenumerics", {legacy::finaleNumericsLegacyGlyphs, std::size(legacy::finaleNumericsLegacyGlyphs)} },
-    { "finalepercussion", {legacy::finalePercussionLegacyGlyphs, std::size(legacy::finalePercussionLegacyGlyphs)} },
-    { "gracenotes", {legacy::gracenotesLegacyGlyphs, std::size(legacy::gracenotesLegacyGlyphs)} },
-    { "jazz", {legacy::jazzLegacyGlyphs, std::size(legacy::jazzLegacyGlyphs)} },
-    { "jazzcord", {legacy::jazzcordLegacyGlyphs, std::size(legacy::jazzcordLegacyGlyphs)} },
-    { "jazzperc", {legacy::jazzpercLegacyGlyphs, std::size(legacy::jazzpercLegacyGlyphs)} },
-    { "jazztext", {legacy::jazztextLegacyGlyphs, std::size(legacy::jazztextLegacyGlyphs)} },
-    { "jazztextextended", {legacy::jazztextExtendedLegacyGlyphs, std::size(legacy::jazztextExtendedLegacyGlyphs)} },
-    { "kousaku", {legacy::kousakuLegacyGlyphs, std::size(legacy::kousakuLegacyGlyphs)} },
-    { "kousakupercussion", {legacy::kousakuPercussionLegacyGlyphs, std::size(legacy::kousakuPercussionLegacyGlyphs)} },
-    { "maestro", {legacy::maestroLegacyGlyphs, std::size(legacy::maestroLegacyGlyphs)} },
-    { "maestropercussion", {legacy::maestroPercussionLegacyGlyphs, std::size(legacy::maestroPercussionLegacyGlyphs)} },
-    { "maestrotimes", {legacy::maestrotimesLegacyGlyphs, std::size(legacy::maestrotimesLegacyGlyphs)} },
-    { "maestrowide", {legacy::maestroWideLegacyGlyphs, std::size(legacy::maestroWideLegacyGlyphs)} },
-    { "patmm", {legacy::patmmLegacyGlyphs, std::size(legacy::patmmLegacyGlyphs)} },
-    { "petrucci", {legacy::petrucciLegacyGlyphs, std::size(legacy::petrucciLegacyGlyphs)} },
-    { "pmusic", {legacy::pmusicLegacyGlyphs, std::size(legacy::pmusicLegacyGlyphs)} },
-    { "rentaro", {legacy::rentaroLegacyGlyphs, std::size(legacy::rentaroLegacyGlyphs)} },
-    { "tamburo", {legacy::tamburoLegacyGlyphs, std::size(legacy::tamburoLegacyGlyphs)} },
+    { "ashmusic", {nullptr, 0, MusicFontType::Engraving, MusicFontStyle::Handwritten, "Finale Ash", "No glyph mappings are available for this font: the record exists so that a client substituting a modern face can still resolve a successor. The successor is unverified by measurement, as the legacy font is not installed here, though Finale Ash is.", 4.0, "Recorded from published information about the font rather than measured; the legacy font was not available locally."} },
+    { "broadwaycopyist", {legacy::broadwayCopyistLegacyGlyphs, std::size(legacy::broadwayCopyistLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Handwritten, "Finale Broadway", "", 4.0, ""} },
+    { "broadwaycopyistperc", {legacy::broadwayCopyistPercLegacyGlyphs, std::size(legacy::broadwayCopyistPercLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Handwritten, "Finale Broadway", "", 4.0, ""} },
+    { "broadwaycopyisttext", {legacy::broadwayCopyistTextLegacyGlyphs, std::size(legacy::broadwayCopyistTextLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Handwritten, "Finale Broadway Legacy Text", "The text face carrying these designs: 65% of size measurements match exactly and 75% of glyphs match by aspect ratio. Distinct from Finale Copyist Text, whose designs went to Finale Broadway Text instead.", 4.0, ""} },
+    { "broadwaycopyisttextext", {legacy::broadwayCopyistTextExtLegacyGlyphs, std::size(legacy::broadwayCopyistTextExtLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Handwritten, "", "Only 5 glyphs are mapped and none matches any candidate face by aspect ratio, so no successor could be established despite the font being an extension of Broadway Copyist Text.", 4.0, "Only 5 glyphs are mapped, so the outline-reuse signal is weak (measurements at 3.997 and 4.005). Value follows the rest of the Broadway Copyist family, which measures 4.0 conclusively."} },
+    { "chaconne", {legacy::chaconneLegacyGlyphs, std::size(legacy::chaconneLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Chaconne Ex", "The SMuFL successor to Chaconne. Not available locally, so unverified by measurement.", 4.0, "Established from the staff5Lines anchor (3.9961), which matches Maestro, Maestro Wide and Jazz exactly. Chaconne's SMuFL successor is Chaconne Ex, which was not available, so no outline-reuse comparison was possible and the anchor is the sole evidence."} },
+    { "crescendo", {legacy::crescendoLegacyGlyphs, std::size(legacy::crescendoLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "", "No candidate SMuFL face shares its designs.", std::nullopt, "Measured, but no consistent scale: the harp pedal glyphs imply roughly 5.4 staff spaces per em while pluckedSnapPizzicatoAbove implies roughly 2.6. The font's em is not staff-relative."} },
+    { "engraverfontextras", {legacy::engraverFontExtrasLegacyGlyphs, std::size(legacy::engraverFontExtrasLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Engraver", "", 4.0, ""} },
+    { "engraverfontset", {legacy::engraverFontSetLegacyGlyphs, std::size(legacy::engraverFontSetLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Engraver", "", 4.0, ""} },
+    { "engravertexth", {legacy::engraverTextHLegacyGlyphs, std::size(legacy::engraverTextHLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "Finale Engraver", "No SMuFL Finale Engraver *text* face exists, so the music face is the only successor; 73% of glyphs match it by aspect ratio.", 4.0, ""} },
+    { "engravertextncs", {legacy::engraverTextNcsLegacyGlyphs, std::size(legacy::engraverTextNcsLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "Finale Engraver", "No SMuFL Finale Engraver *text* face exists, so the music face is the only successor; 73% of glyphs match it by aspect ratio.", 4.0, ""} },
+    { "engravertextt", {legacy::engraverTextTLegacyGlyphs, std::size(legacy::engraverTextTLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "Finale Engraver", "No SMuFL Finale Engraver *text* face exists, so the music face is the only successor; 75% of glyphs match it by aspect ratio.", 4.0, ""} },
+    { "engravertime", {legacy::engraverTimeLegacyGlyphs, std::size(legacy::engraverTimeLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Engraver", "", 4.0, "Measured against Finale Engraver after resolving the U+FFFD entries through glyphnamesFinale.json: 15 of 20 measurements match 4.0 exactly. The large time signature digits are about 8.6 staff spaces tall by design, and Finale Engraver draws the same glyphs (U+F440-U+F449) at the same em scale, 2.15 em."} },
+    { "finalealphanotes", {legacy::finaleAlphanotesLegacyGlyphs, std::size(legacy::finaleAlphanotesLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "All 84 mapped glyphs match Finale Maestro by aspect ratio.", 4.0, ""} },
+    { "finalecopyisttext", {legacy::finaleCopyistTextLegacyGlyphs, std::size(legacy::finaleCopyistTextLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Handwritten, "Finale Broadway Text", "61% of size measurements match exactly and 58% of glyphs match by aspect ratio. Distinct from Broadway Copyist Text, whose designs went to Finale Broadway Legacy Text.", 4.0, ""} },
+    { "finalecopyisttextext", {legacy::finaleCopyistTextExtLegacyGlyphs, std::size(legacy::finaleCopyistTextExtLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Handwritten, "", "The file maps a single glyph, which is too little to establish a successor.", 4.0, ""} },
+    { "finalemallets", {legacy::finaleMalletsLegacyGlyphs, std::size(legacy::finaleMalletsLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "76 of 77 mapped glyphs match Finale Maestro by aspect ratio.", 4.0, ""} },
+    { "finalenumerics", {legacy::finaleNumericsLegacyGlyphs, std::size(legacy::finaleNumericsLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "", "No candidate face shares its designs; only 6 glyphs are comparable.", std::nullopt, "A numeral and figured-bass font. No scale is consistent across its glyphs against either a SMuFL music font or a SMuFL text font; its point size is not staff-relative."} },
+    { "finalepercussion", {legacy::finalePercussionLegacyGlyphs, std::size(legacy::finalePercussionLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "91% of glyphs match Finale Maestro by aspect ratio.", 4.0, ""} },
+    { "gracenotes", {legacy::gracenotesLegacyGlyphs, std::size(legacy::gracenotesLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "", "No candidate SMuFL face shares its designs.", 4.0, "Inferred, not measured: the outlines were drawn independently, so no exact reuse cluster exists. Per-glyph measurements cluster near 4.0 (median 3.88, clefs 3.86-4.23), consistent with Finale's convention for music fonts."} },
+    { "jazz", {legacy::jazzLegacyGlyphs, std::size(legacy::jazzLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Handwritten, "Finale Jazz", "", 4.0, ""} },
+    { "jazzcord", {legacy::jazzcordLegacyGlyphs, std::size(legacy::jazzcordLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Handwritten, "", "No candidate face shares its designs; only 8 glyphs are comparable.", 4.0, "Median lands exactly on 4.0 but only 3 of 20 measurements match exactly, as the font maps just 10 glyphs. Consistent with the rest of the Jazz family."} },
+    { "jazzperc", {legacy::jazzpercLegacyGlyphs, std::size(legacy::jazzpercLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Handwritten, "Finale Jazz", "", 4.0, ""} },
+    { "jazztext", {legacy::jazztextLegacyGlyphs, std::size(legacy::jazztextLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Handwritten, "Finale Jazz Text", "The text face carrying these designs (81% aspect-ratio match).", 4.0, ""} },
+    { "jazztextextended", {legacy::jazztextExtendedLegacyGlyphs, std::size(legacy::jazztextExtendedLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Handwritten, "Finale Jazz Text", "46% of glyphs match Finale Jazz Text by aspect ratio.", 4.0, ""} },
+    { "kousaku", {legacy::kousakuLegacyGlyphs, std::size(legacy::kousakuLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "", "No candidate SMuFL face shares its designs.", 4.0, "Established from the staff5Lines anchor (3.9961), identical to Maestro's. This corroborates published reports that Kousaku is plug-compatible with Maestro. Median against Finale Legacy is exactly 4.0000."} },
+    { "kousakupercussion", {legacy::kousakuPercussionLegacyGlyphs, std::size(legacy::kousakuPercussionLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "", "Too few comparable glyphs to establish a successor.", 4.0, "34 of 150 measurements against Finale Legacy match 4.0 exactly. The font has no staff5Lines glyph mapped, so the successor comparison is the sole evidence. Note its unitsPerEm is 2130 rather than 1000."} },
+    { "maestro", {legacy::maestroLegacyGlyphs, std::size(legacy::maestroLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "", 4.0, ""} },
+    { "maestropercussion", {legacy::maestroPercussionLegacyGlyphs, std::size(legacy::maestroPercussionLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "", 4.0, ""} },
+    { "maestrotimes", {legacy::maestrotimesLegacyGlyphs, std::size(legacy::maestrotimesLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "Finale Maestro Text", "The text face carrying these designs: 22% of size measurements match exactly and it is the best aspect-ratio match.", 4.0, "Measured against Finale Maestro Text, which is itself 4.0 staff spaces per em; 24 of 108 measurements match exactly. Its outlines were reused into the SMuFL text face rather than a music face."} },
+    { "maestrowide", {legacy::maestroWideLegacyGlyphs, std::size(legacy::maestroWideLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "", 4.0, ""} },
+    { "patmm", {legacy::patmmLegacyGlyphs, std::size(legacy::patmmLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "", "No candidate SMuFL face shares its designs.", std::nullopt, "Measurements scatter from 1.09 to 7.05 across the 13 mapped glyphs with no coherent scale, so no staff-relative size can be established."} },
+    { "petrucci", {legacy::petrucciLegacyGlyphs, std::size(legacy::petrucciLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Legacy", "", 4.0, ""} },
+    { "pmusic", {legacy::pmusicLegacyGlyphs, std::size(legacy::pmusicLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "A deliberate best-fit substitution rather than a design successor. Pmusic derives from the old Sonata font, which has no SMuFL migration path, so its designs match no SMuFL face (8% aspect-ratio match).", 4.0, "The outlines were drawn independently of the Finale SMuFL fonts, so there is no exact reuse cluster. Established instead from the staff5Lines anchor (4.055) and noteheadBlack (exactly 4.000)."} },
+    { "rentaro", {legacy::rentaroLegacyGlyphs, std::size(legacy::rentaroLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "", "No candidate SMuFL face shares its designs.", std::nullopt, "A rehearsal mark font whose symbols are sized to text rather than to a staff. Every SMuFL font draws barlineSingle at exactly 4.000 staff spaces, but Rentaro's barlines are 0.630 em tall: at 4.0 staff spaces per em that would be a barline only 2.52 spaces tall, and at the 6.349 implied by the height its stroke would be 0.235 spaces against Bravura's 0.144. The glyphs are simply not drawn to staff proportions, so no staff-relative size can be established."} },
+    { "sonata", {nullptr, 0, MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "A best-fit substitution rather than a design successor. Sonata is an Adobe font with no SMuFL migration path; Pmusic, which derives from it, names the same substitute. No glyph mappings are available for this font: the record exists so that a client substituting a modern face can still resolve a successor.", 4.0, "Recorded from prior knowledge, not measured: Sonata sized the same way as Pmusic, which measures 4.0. The font is an Adobe Type 1 face that does not run on current macOS, so it could not be verified here."} },
+    { "tamburo", {legacy::tamburoLegacyGlyphs, std::size(legacy::tamburoLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Legacy", "82% of glyphs match Finale Legacy by aspect ratio.", 4.0, ""} },
 };
 
 } // namespace smufl_mapping::detail

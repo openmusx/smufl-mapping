@@ -46,6 +46,86 @@ struct SmuflGlyphInfo
     SmuflGlyphSource source{};      ///< The source for the glyph
 };
 
+/// @brief The number of staff spaces spanned by one em in a conforming SMuFL font.
+///
+/// SMuFL defines fonts so that one em equals four staff spaces, which is what makes a
+/// point size portable from one SMuFL font to another. Legacy fonts make no such promise,
+/// so #LegacyFontInfo::staffSpacesPerEm records what each legacy font actually does.
+inline constexpr double kSmuflStaffSpacesPerEm = 4.0;
+
+/// @enum MusicFontType
+/// @brief How a music font is used in a score. Applies to both legacy and SMuFL fonts.
+enum class MusicFontType
+{
+    Engraving,  ///< Placed in the score as notation
+    Text        ///< Set inline with running text (chord symbols, metronome marks, expressions)
+};
+
+/// @enum MusicFontStyle
+/// @brief What a music font looks like. Applies to both legacy and SMuFL fonts.
+///
+/// Independent of #MusicFontType: a font may be #Handwritten and still be set inline
+/// with text, as the Jazz and Broadway Copyist text faces are.
+enum class MusicFontStyle
+{
+    Engraved,   ///< Imitates traditional plate engraving
+    Handwritten ///< Imitates manuscript
+};
+
+/// @struct SmuflFontInfo
+/// @brief What is known about a SMuFL font.
+struct SmuflFontInfo
+{
+    MusicFontType fontType{};                   ///< How the font is used in a score
+    MusicFontStyle fontStyle{};                 ///< What the font looks like, independent of #fontType
+    std::optional<double> staffSpacesPerEm{};   ///< Staff spaces spanned by one em.
+                                                ///< A SMuFL *music* font is #kSmuflStaffSpacesPerEm by definition, but a
+                                                ///< *text* font is not: Bravura Text and its peers use 5.0 while MakeMusic's
+                                                ///< text faces stay on the music em scale at 4.0. A caller sizing a glyph
+                                                ///< substituted into a text face must read this rather than assume.
+                                                ///< `nullopt` when it could not be established.
+    std::string_view sizeNotes{};               ///< Why #staffSpacesPerEm holds the value it does. Populated whenever the
+                                                ///< value is `nullopt` or was not confirmed by measurement.
+};
+
+/// @struct LegacyFontInfo
+/// @brief Font-level information about a legacy font as a whole.
+struct LegacyFontInfo
+{
+    MusicFontType fontType{};                  ///< How the font is used in a score
+    MusicFontStyle fontStyle{};                ///< What the font looks like, independent of #fontType
+    std::string_view smuflSuccessorFont{};      ///< Name of the SMuFL font that supersedes this legacy font,
+                                                ///< for a caller substituting a modern face. A #MusicFontType::Text
+                                                ///< font names a SMuFL text face where one exists. Empty when no
+                                                ///< successor has been established; callers should fall back to
+                                                ///< their own default rather than guess.
+    std::string_view successorNotes{};          ///< Why #smuflSuccessorFont holds the value it does. Populated
+                                                ///< whenever it is empty or the choice is not obvious.
+    std::optional<double> staffSpacesPerEm{};   ///< Staff spaces spanned by one em in this font.
+                                                ///< `nullopt` means the font opts out: its point size has no
+                                                ///< staff-relative meaning and callers must not derive a size from it.
+    std::string_view sizeNotes{};               ///< Why #staffSpacesPerEm holds the value it does. Populated
+                                                ///< whenever the value is `nullopt` or was inferred rather than measured.
+
+    /// @brief The factor converting a point size in this legacy font to the equivalent
+    ///        point size in a substituted SMuFL font.
+    /// @return The factor, or `nullopt` when the font opts out of size mapping.
+    ///
+    /// Multiply the legacy font's point size by this value:
+    /// @code
+    /// if (auto ratio = info.smuflSizeRatio()) {
+    ///     smuflPointSize = legacyPointSize * (*ratio);
+    /// }
+    /// @endcode
+    constexpr std::optional<double> smuflSizeRatio() const
+    {
+        if (!staffSpacesPerEm) {
+            return std::nullopt;
+        }
+        return kSmuflStaffSpacesPerEm / *staffSpacesPerEm;
+    }
+};
+
 /// @struct LegacyGlyphInfo
 /// @brief Maps a SMuFL glyph to a legacy codepoint.
 struct LegacyGlyphInfo
@@ -84,6 +164,25 @@ const std::string_view* getGlyphNameForFont(std::string_view fontName,
                                             char32_t codepoint,
                                             bool fontIsSmufl,
                                             std::optional<SmuflGlyphSource> optionalSource = std::nullopt);
+
+/// @brief Look up what is known about a SMuFL font.
+/// @param fontName The SMuFL font name (e.g., "Bravura", "Finale Maestro Text"). The search is
+///        case-insensitive and ignores whitespace.
+/// @return The #SmuflFontInfo, or `nullopt` if the font is not in the registry.
+///
+/// Every name returned by #LegacyFontInfo::smuflSuccessorFont is guaranteed to resolve here;
+/// the build fails otherwise.
+std::optional<SmuflFontInfo> getSmuflFontInfo(std::string_view fontName);
+
+/// @brief Look up font-level information for a legacy font.
+/// @param fontName The name of the legacy font (e.g., "maestro", "petrucci"). The search is
+///        case-insensitive and ignores whitespace.
+/// @return The #LegacyFontInfo, or `nullopt` if the font is not a known legacy font.
+///
+/// A known font that opts out of size mapping returns an engaged #LegacyFontInfo whose
+/// #LegacyFontInfo::staffSpacesPerEm is `nullopt`; that is distinct from an unknown font,
+/// which returns `nullopt` here.
+std::optional<LegacyFontInfo> getLegacyFontInfo(std::string_view fontName);
 
 /// @brief Lookup legacy glyph info by font name and codepoint.
 /// @param fontName The name of the legacy font (e.g., "maestro", "petrucci"). This is a case-insensitive search.
