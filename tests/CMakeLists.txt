@@ -14,6 +14,7 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(smufl_mapping_tests
+    font_key_tests.cpp
     legacy_mapping_tests.cpp
     smufl_mapping_tests.cpp
 )
@@ -35,6 +36,7 @@ target_link_libraries(smufl_mapping_tests PRIVATE
 target_include_directories(smufl_mapping_tests
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/../src
+        ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 include(GoogleTest)
@@ -67,6 +69,12 @@ if(TARGET Python3::Interpreter)
     add_python_legacy_test(
         legacy_unresolved_codepoint_is_nullopt
         legacy_unresolved_codepoint_test.py
+    )
+    # Pairs with the FontKeyTests gtest: both walk tests/data/font_key_vectors.json,
+    # which is what keeps the Python and C++ normalizers from drifting apart.
+    add_python_legacy_test(
+        font_key_normalization_matches_shared_vectors
+        font_key_test.py
     )
 else()
     message(STATUS "Skipping Python legacy tests: Python3::Interpreter not available.")

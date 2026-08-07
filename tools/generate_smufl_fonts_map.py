@@ -5,6 +5,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+from font_keys import normalize_font_key
 from json_utils import load_json_strict
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,11 +20,6 @@ FONT_STYLE_ENUM = {
     "engraved": "MusicFontStyle::Engraved",
     "handwritten": "MusicFontStyle::Handwritten",
 }
-
-
-def normalize_font_key(name: str) -> str:
-    """Match normalizeFontKey() in smufl_mapping.cpp so lookups agree."""
-    return ''.join(name.lower().split())
 
 
 def cpp_string_literal(text: str) -> str:

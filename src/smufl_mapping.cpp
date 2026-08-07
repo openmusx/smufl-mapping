@@ -22,7 +22,6 @@
 #include <unordered_map>
 #include <algorithm>
 #include <string>
-#include <cctype>
 
 #include "smufl_mapping.h"
 
@@ -31,6 +30,7 @@
 #include "detail/glyphnames_bravura.h"
 #include "detail/glyphnames_legacy.h"
 #include "detail/smufl_fonts.h"
+#include "detail/font_key.h"
 
 namespace smufl_mapping {
 
@@ -135,21 +135,7 @@ const std::string_view* getGlyphNameForFont(std::string_view fontName,
     return nullptr;
 }
 
-// Lowercase normalization for case-insensitive font name lookup.
-// Also removes whitespace so font keys match regardless of platform naming differences.
-static std::string normalizeFontKey(std::string_view s)
-{
-    std::string out;
-    out.reserve(s.size());
-    for (unsigned char c : s) {
-        const bool isAsciiWhitespace = (c <= 0x7F) && std::isspace(c);
-        if (isAsciiWhitespace) {
-            continue;
-        }
-        out.push_back(static_cast<char>(std::tolower(c))); // normalize case
-    }
-    return out;
-}
+using detail::normalizeFontKey;
 
 namespace {
 
