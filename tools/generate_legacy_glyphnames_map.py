@@ -4,6 +4,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+from font_keys import normalize_font_key
 from json_utils import load_json_strict
 
 BASE_DIR = Path(__file__).resolve().parent.parent  # root of repo
@@ -36,10 +37,6 @@ def sanitize_var_name(stem: str) -> str:
 
 def sanitize_file_name(stem: str) -> str:
     return stem.lower().replace("-", "_").replace(" ", "_")
-
-def normalize_font_key(name: str) -> str:
-    """Lowercase the font name and strip all whitespace so lookups are platform-agnostic."""
-    return ''.join(name.lower().split())
 
 FONT_TYPE_ENUM = {
     "engraving": "MusicFontType::Engraving",

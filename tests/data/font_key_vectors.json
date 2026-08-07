@@ -1,0 +1,111 @@
+{
+    "description": [
+        "The shared contract between normalizeFontKey() in src/detail/font_key.h and",
+        "normalize_font_key() in tools/font_keys.py. Two implementations are",
+        "unavoidable - the C++ normalizes caller input at runtime, the Python",
+        "normalizes at generation time to emit the table keys - so they are pinned",
+        "here instead. tests/font_key_test.py checks the Python against these vectors",
+        "and confirms tests/font_key_vectors.h is current; tests/font_key_tests.cpp",
+        "checks the C++ against the same rows via that generated header.",
+        "",
+        "Add a vector whenever the rule changes. A case that only one language can",
+        "get right is the bug this file exists to catch."
+    ],
+    "vectors": [
+        {
+            "raw": "Maestro Wide",
+            "key": "maestrowide",
+            "note": "the ordinary case: fold case, drop the space"
+        },
+        {
+            "raw": "maestrowide",
+            "key": "maestrowide",
+            "note": "already normalized; normalization is idempotent"
+        },
+        {
+            "raw": "  MAESTRO   wide ",
+            "key": "maestrowide",
+            "note": "leading, interior and trailing runs all collapse away"
+        },
+        {
+            "raw": "Finale\tCopyist\nText\r",
+            "key": "finalecopyisttext",
+            "note": "tab, newline and carriage return are ASCII whitespace"
+        },
+        {
+            "raw": "Maestro\u000bWide\f",
+            "key": "maestrowide",
+            "note": "vertical tab and form feed complete the six ASCII whitespace chars"
+        },
+        {
+            "raw": "",
+            "key": "",
+            "note": "empty in, empty out"
+        },
+        {
+            "raw": "   ",
+            "key": "",
+            "note": "whitespace-only normalizes to the empty key, which matches nothing"
+        },
+        {
+            "raw": "Maestro, Times",
+            "key": "maestro,times",
+            "note": "the comma survives; without it this would become 'maestrotimes', a real font, silently answering a MusicXML font-family list with the wrong face"
+        },
+        {
+            "raw": "Bravura-Regular",
+            "key": "bravura-regular",
+            "note": "punctuation is not folded, so a PostScript name does not masquerade as its family"
+        },
+        {
+            "raw": "Maestro Wide",
+            "key": "maestro wide",
+            "note": "U+00A0 NO-BREAK SPACE is NOT removed; Python's str.split() would have, the C++ never would, and the generator must not mint a key the runtime cannot reach"
+        },
+        {
+            "raw": "MaestroWide",
+            "key": "maestrowide",
+            "note": "U+0085 NEXT LINE: whitespace to Python's str.split(), not to this rule"
+        },
+        {
+            "raw": "Maestro　Wide",
+            "key": "maestro　wide",
+            "note": "U+3000 IDEOGRAPHIC SPACE: likewise left alone"
+        },
+        {
+            "raw": "Maestro\u001cWide",
+            "key": "maestro\u001cwide",
+            "note": "U+001C FILE SEPARATOR is plain ASCII and still not whitespace here, though str.split() drops it"
+        },
+        {
+            "raw": "Maestro\u001fWide",
+            "key": "maestro\u001fwide",
+            "note": "U+001F UNIT SEPARATOR, same reasoning"
+        },
+        {
+            "raw": "Kousaku Percussion",
+            "key": "kousakupercussion",
+            "note": "a real legacy font, so the C++ side can also confirm this key resolves"
+        },
+        {
+            "raw": "MAESTROTIMES",
+            "key": "maestrotimes",
+            "note": "a real legacy font reached by an all-caps spelling"
+        },
+        {
+            "raw": "Bravura Text",
+            "key": "bravuratext",
+            "note": "a real SMuFL registry font, exercising the same key on the registry side"
+        },
+        {
+            "raw": "Ä Maestro",
+            "key": "Ämaestro",
+            "note": "the leading A-umlaut stays UPPERCASE: only A-Z are folded. Python's str.lower() would have lowercased it, and std::tolower() under a Latin-1 locale would have rewritten bytes inside the UTF-8 sequence - either one would put a key in the table that the other language could never produce"
+        },
+        {
+            "raw": "Grüße Wide",
+            "key": "grüßewide",
+            "note": "multi-byte UTF-8 survives intact, whether walked as characters or as bytes"
+        }
+    ]
+}

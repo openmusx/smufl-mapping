@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Set
 
+from font_keys import normalize_font_key
 from json_utils import DuplicateKeyError, load_json_strict
 
 
@@ -332,11 +333,6 @@ def load_smufl_registry(path: Path) -> Dict:
             raise ValidationError(f"{path}: '{name}' sizeNotes must be a string")
 
     return data
-
-
-def normalize_font_key(name: str) -> str:
-    """Match normalizeFontKey() in smufl_mapping.cpp so lookups agree."""
-    return "".join(name.lower().split())
 
 
 def check_successors_resolve(files: List[Path], registry: Dict) -> List[str]:

@@ -27,6 +27,34 @@
 
 namespace smufl_mapping {
 
+/// @page fontnamematching How font names are matched
+///
+/// The same face is spelled differently everywhere it is recorded — "Maestro Wide"
+/// in a font menu, "MaestroWide" in a score file, "MAESTRO WIDE" in something
+/// older. Every lookup here that takes a font name therefore normalizes it first,
+/// and one table entry answers for all of those spellings.
+///
+/// The rule is narrow on purpose:
+///
+/// - **ASCII case is folded.** Only `A`-`Z`; accented and non-ASCII letters are
+///   left exactly as they are, and the result never depends on the host program's
+///   locale.
+/// - **ASCII whitespace is removed** — space, tab, newline, vertical tab, form
+///   feed, carriage return, anywhere in the name. Nothing else counts as
+///   whitespace: a no-break space (U+00A0) or an ideographic space (U+3000) is
+///   kept, so a name containing one will not match.
+/// - **Nothing else is touched.** Punctuation in particular survives, and callers
+///   need to know it:
+///   - A comma is *not* a separator. A CSS or MusicXML `font-family` list such as
+///     `"Maestro, Times"` will not match anything — **split it yourself and try
+///     each entry in turn.** Were commas folded away, that list would normalize to
+///     `maestrotimes`, which is the name of a real Finale font, and the wrong face
+///     would be substituted with no error to notice.
+///   - A PostScript name such as `"Bravura-Regular"` will not match `Bravura`.
+///     Strip the style suffix before looking it up.
+///
+/// A name that normalizes to the empty string matches nothing.
+
 /// @enum SmuflGlyphSource
 /// @brief Known sources for SMuFL glyphs
 enum class SmuflGlyphSource
@@ -166,8 +194,8 @@ const std::string_view* getGlyphNameForFont(std::string_view fontName,
                                             std::optional<SmuflGlyphSource> optionalSource = std::nullopt);
 
 /// @brief Look up what is known about a SMuFL font.
-/// @param fontName The SMuFL font name (e.g., "Bravura", "Finale Maestro Text"). The search is
-///        case-insensitive and ignores whitespace.
+/// @param fontName The SMuFL font name (e.g., "Bravura", "Finale Maestro Text"). The search folds
+///        ASCII case and ignores ASCII whitespace; see @ref fontnamematching.
 /// @return The #SmuflFontInfo, or `nullopt` if the font is not in the registry.
 ///
 /// Every name returned by #LegacyFontInfo::smuflSuccessorFont is guaranteed to resolve here;
@@ -175,8 +203,8 @@ const std::string_view* getGlyphNameForFont(std::string_view fontName,
 std::optional<SmuflFontInfo> getSmuflFontInfo(std::string_view fontName);
 
 /// @brief Look up font-level information for a legacy font.
-/// @param fontName The name of the legacy font (e.g., "maestro", "petrucci"). The search is
-///        case-insensitive and ignores whitespace.
+/// @param fontName The name of the legacy font (e.g., "maestro", "petrucci"). The search folds
+///        ASCII case and ignores ASCII whitespace; see @ref fontnamematching.
 /// @return The #LegacyFontInfo, or `nullopt` if the font is not a known legacy font.
 ///
 /// A known font that opts out of size mapping returns an engaged #LegacyFontInfo whose
@@ -185,13 +213,15 @@ std::optional<SmuflFontInfo> getSmuflFontInfo(std::string_view fontName);
 std::optional<LegacyFontInfo> getLegacyFontInfo(std::string_view fontName);
 
 /// @brief Lookup legacy glyph info by font name and codepoint.
-/// @param fontName The name of the legacy font (e.g., "maestro", "petrucci"). This is a case-insensitive search.
+/// @param fontName The name of the legacy font (e.g., "maestro", "petrucci"). The search folds
+///        ASCII case and ignores ASCII whitespace; see @ref fontnamematching.
 /// @param codepoint The legacy font codepoint to search for. (Commonly in the 0x00..0xFF range, but may be larger).
 /// @return A pointer to the LegacyGlyphInfo, or nullptr if not found.
 const LegacyGlyphInfo* getLegacyGlyphInfo(std::string_view fontName, char32_t codepoint);
 
 /// @brief Return every legacy glyph mapping for a font/codepoint.
-/// @param fontName Legacy font name (case-insensitive, whitespace ignored).
+/// @param fontName Legacy font name; ASCII case folded, ASCII whitespace ignored.
+///        See @ref fontnamematching.
 /// @param codepoint Legacy codepoint to look up.
 /// @return Vector of pointers; canonical entries appear first when present.
 std::vector<const LegacyGlyphInfo*> getAllLegacyGlyphInfo(std::string_view fontName,
