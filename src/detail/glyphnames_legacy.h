@@ -44,6 +44,7 @@
 #include "detail/legacy/maestro_percussion_legacy_map.h"
 #include "detail/legacy/maestrotimes_legacy_map.h"
 #include "detail/legacy/maestro_wide_legacy_map.h"
+#include "detail/legacy/opus_legacy_map.h"
 #include "detail/legacy/patmm_legacy_map.h"
 #include "detail/legacy/petrucci_legacy_map.h"
 #include "detail/legacy/pmusic_legacy_map.h"
@@ -96,6 +97,7 @@ constexpr std::pair<std::string_view, LegacyFontMapping> legacyFontMappings[] = 
     { "maestropercussion", {legacy::maestroPercussionLegacyGlyphs, std::size(legacy::maestroPercussionLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "", 4.0, ""} },
     { "maestrotimes", {legacy::maestrotimesLegacyGlyphs, std::size(legacy::maestrotimesLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "Finale Maestro Text", "The text face carrying these designs: 22% of size measurements match exactly and it is the best aspect-ratio match.", 4.0, "Measured against Finale Maestro Text, which is itself 4.0 staff spaces per em; 24 of 108 measurements match exactly. Its outlines were reused into the SMuFL text face rather than a music face."} },
     { "maestrowide", {legacy::maestroWideLegacyGlyphs, std::size(legacy::maestroWideLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "", 4.0, ""} },
+    { "opus", {legacy::opusLegacyGlyphs, std::size(legacy::opusLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Bravura", "A deliberate substitution, not a design successor. Sibelius never supported SMuFL, so Opus has no SMuFL descendant. Bravura is named because the OFL font Norfolk is Bravura reconfigured onto the Opus character layout, making it the established modern stand-in for Opus.", 4.0, "Measured against Bravura on single-symbol anchors (cClef 4.03, accidentalSharp 4.06, accidentalFlat 4.08); notehead comparison against Leland and Finale Maestro corroborates 3.95-4.06 after correcting for notehead overshoot. Clefs and time-signature digits scatter 3.7-4.3, the expected signature of an independently drawn design."} },
     { "patmm", {legacy::patmmLegacyGlyphs, std::size(legacy::patmmLegacyGlyphs), MusicFontType::Text, MusicFontStyle::Engraved, "", "No candidate SMuFL face shares its designs.", std::nullopt, "Measurements scatter from 1.09 to 7.05 across the 13 mapped glyphs with no coherent scale, so no staff-relative size can be established."} },
     { "petrucci", {legacy::petrucciLegacyGlyphs, std::size(legacy::petrucciLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Legacy", "", 4.0, ""} },
     { "pmusic", {legacy::pmusicLegacyGlyphs, std::size(legacy::pmusicLegacyGlyphs), MusicFontType::Engraving, MusicFontStyle::Engraved, "Finale Maestro", "A deliberate best-fit substitution rather than a design successor. Pmusic derives from the old Sonata font, which has no SMuFL migration path, so its designs match no SMuFL face (8% aspect-ratio match).", 4.0, "The outlines were drawn independently of the Finale SMuFL fonts, so there is no exact reuse cluster. Established instead from the staff5Lines anchor (4.055) and noteheadBlack (exactly 4.000)."} },
