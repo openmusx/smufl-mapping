@@ -60,6 +60,14 @@ if(TARGET Python3::Interpreter)
         legacy_duplicate_legacycodepoints_in_array
         duplicate_legacy_array_codepoints_test.py
     )
+    add_python_legacy_test(
+        legacy_font_metadata
+        legacy_font_metadata_test.py
+    )
+    add_python_legacy_test(
+        legacy_unresolved_codepoint_is_nullopt
+        legacy_unresolved_codepoint_test.py
+    )
 else()
     message(STATUS "Skipping Python legacy tests: Python3::Interpreter not available.")
 endif()

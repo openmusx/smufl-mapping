@@ -1,21 +1,16 @@
 {
   "fontMetadata": {
-    "fontType": "engraving",
+    "fontType": "engrave",
     "fontStyle": "engraved",
     "smuflSuccessorFont": "Finale Maestro",
     "staffSpacesPerEm": 4.0
   },
   "glyphs": {
-    "glyphDuplicateLegacy": [
+    "glyphOriginal": [
       {
         "legacyCodepoints": ["0x2B"],
         "codepoint": "U+E000",
-        "description": "First mapping"
-      },
-      {
-        "legacyCodepoints": ["0x2B"],
-        "codepoint": "U+E001",
-        "description": "Second mapping"
+        "description": "fontType must be one of the known values"
       }
     ]
   }

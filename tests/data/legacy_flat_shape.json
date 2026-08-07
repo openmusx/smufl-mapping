@@ -1,0 +1,9 @@
+{
+  "glyphWithoutWrapper": [
+    {
+      "legacyCodepoints": ["0x2B"],
+      "codepoint": "U+E000",
+      "description": "Pre-wrapper format: glyph names sat at the top level"
+    }
+  ]
+}

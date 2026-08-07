@@ -29,7 +29,12 @@ def generate_glyphnames_header(input_path: Path, var_name: str, output_path: Pat
     elif input_path.name == "glyphnamesBravura.json":
         source_enum = "SmuflGlyphSource::Bravura"
     else:
-        source_enum = "SmuflGlyphSource::Unknown"
+        # SmuflGlyphSource has no Unknown enumerator; naming one here would fail
+        # to compile the moment this branch was reached. Other is the enum's
+        # documented value for glyphs from a source outside the known three.
+        print(f"Warning: unrecognized glyph source file '{input_path.name}'; "
+              f"tagging its glyphs as SmuflGlyphSource::Other")
+        source_enum = "SmuflGlyphSource::Other"
 
     entries = []
     for name, data in glyphs.items():
@@ -45,10 +50,18 @@ def generate_glyphnames_header(input_path: Path, var_name: str, output_path: Pat
     reverse_var_name = "reverse" + var_name[0].upper() + var_name[1:]
 
     base_dir = Path(__file__).resolve().parent.parent
+    resolved = input_path.resolve()
     try:
-        source_label = str(input_path.resolve().relative_to(base_dir))
-    except Exception:
-        source_label = str(input_path)
+        source_label = "source_json/" + str(
+            resolved.relative_to(base_dir / "source_json").as_posix()
+        )
+    except ValueError:
+        # Inputs fetched into the build tree (the w3c/smufl metadata) are still
+        # under base_dir, so a plain relative_to() would bake the build
+        # directory's name into the header and make a build in, say, build-regen
+        # produce a spurious diff against one built in build. Record just the
+        # file name, which is stable wherever the build happens.
+        source_label = resolved.name
 
     with open(output_path, "w", encoding="utf-8") as out:
         out.write(f"// This file is generated from {source_label}. DO NOT EDIT.\n")

@@ -1,147 +1,157 @@
 {
-    "metNote32ndUp": [
-        {
-            "legacyCodepoints": [
-                "34"
-            ],
-            "codepoint": "U+ECAB",
-            "description": ""
-        }
-    ],
-    "metNote16thUp": [
-        {
-            "legacyCodepoints": [
-                "35"
-            ],
-            "codepoint": "U+ECA9",
-            "description": ""
-        }
-    ],
-    "metNote8thUp": [
-        {
-            "legacyCodepoints": [
-                "36"
-            ],
-            "codepoint": "U+ECA7",
-            "description": ""
-        }
-    ],
-    "metNoteQuarterUp": [
-        {
-            "legacyCodepoints": [
-                "37"
-            ],
-            "codepoint": "U+ECA5",
-            "description": ""
-        }
-    ],
-    "metNoteHalfUp": [
-        {
-            "legacyCodepoints": [
-                "38"
-            ],
-            "codepoint": "U+ECA3",
-            "description": ""
-        }
-    ],
-    "metNoteWhole": [
-        {
-            "legacyCodepoints": [
-                "39"
-            ],
-            "codepoint": "U+ECA2",
-            "description": ""
-        }
-    ],
-    "noteheadParenthesisLeft": [
-        {
-            "legacyCodepoints": [
-                "40"
-            ],
-            "codepoint": "U+E0F5",
-            "description": ""
-        }
-    ],
-    "noteheadParenthesisRight": [
-        {
-            "legacyCodepoints": [
-                "41"
-            ],
-            "codepoint": "U+E0F6",
-            "description": ""
-        }
-    ],
-    "restQuarter": [
-        {
-            "legacyCodepoints": [
-                "63"
-            ],
-            "codepoint": "U+E4E5",
-            "description": ""
-        }
-    ],
-    "repeatLeft": [
-        {
-            "legacyCodepoints": [
-                "128"
-            ],
-            "codepoint": "U+E040",
-            "description": ""
-        }
-    ],
-    "repeatRight": [
-        {
-            "legacyCodepoints": [
-                "232"
-            ],
-            "codepoint": "U+E041",
-            "description": ""
-        }
-    ],
-    "repeatRightLeftThick": [
-        {
-            "legacyCodepoints": [
-                "133"
-            ],
-            "codepoint": "U+FFFD",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "barlineSingle": [
-        {
-            "legacyCodepoints": [
-                "138"
-            ],
-            "codepoint": "U+E030",
-            "description": ""
-        }
-    ],
-    "barlineFinal": [
-        {
-            "legacyCodepoints": [
-                "145"
-            ],
-            "codepoint": "U+E032",
-            "description": ""
-        }
-    ],
-    "barlineDouble": [
-        {
-            "legacyCodepoints": [
-                "149"
-            ],
-            "codepoint": "U+E031",
-            "description": ""
-        }
-    ],
-    "barlineDashed": [
-        {
-            "legacyCodepoints": [
-                "154"
-            ],
-            "codepoint": "U+E036",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": null,
+        "successorNotes": "No candidate SMuFL face shares its designs.",
+        "staffSpacesPerEm": null,
+        "sizeNotes": "A rehearsal mark font whose symbols are sized to text rather than to a staff. Every SMuFL font draws barlineSingle at exactly 4.000 staff spaces, but Rentaro's barlines are 0.630 em tall: at 4.0 staff spaces per em that would be a barline only 2.52 spaces tall, and at the 6.349 implied by the height its stroke would be 0.235 spaces against Bravura's 0.144. The glyphs are simply not drawn to staff proportions, so no staff-relative size can be established."
+    },
+    "glyphs": {
+        "metNote32ndUp": [
+            {
+                "legacyCodepoints": [
+                    "34"
+                ],
+                "codepoint": "U+ECAB",
+                "description": ""
+            }
+        ],
+        "metNote16thUp": [
+            {
+                "legacyCodepoints": [
+                    "35"
+                ],
+                "codepoint": "U+ECA9",
+                "description": ""
+            }
+        ],
+        "metNote8thUp": [
+            {
+                "legacyCodepoints": [
+                    "36"
+                ],
+                "codepoint": "U+ECA7",
+                "description": ""
+            }
+        ],
+        "metNoteQuarterUp": [
+            {
+                "legacyCodepoints": [
+                    "37"
+                ],
+                "codepoint": "U+ECA5",
+                "description": ""
+            }
+        ],
+        "metNoteHalfUp": [
+            {
+                "legacyCodepoints": [
+                    "38"
+                ],
+                "codepoint": "U+ECA3",
+                "description": ""
+            }
+        ],
+        "metNoteWhole": [
+            {
+                "legacyCodepoints": [
+                    "39"
+                ],
+                "codepoint": "U+ECA2",
+                "description": ""
+            }
+        ],
+        "noteheadParenthesisLeft": [
+            {
+                "legacyCodepoints": [
+                    "40"
+                ],
+                "codepoint": "U+E0F5",
+                "description": ""
+            }
+        ],
+        "noteheadParenthesisRight": [
+            {
+                "legacyCodepoints": [
+                    "41"
+                ],
+                "codepoint": "U+E0F6",
+                "description": ""
+            }
+        ],
+        "restQuarter": [
+            {
+                "legacyCodepoints": [
+                    "63"
+                ],
+                "codepoint": "U+E4E5",
+                "description": ""
+            }
+        ],
+        "repeatLeft": [
+            {
+                "legacyCodepoints": [
+                    "128"
+                ],
+                "codepoint": "U+E040",
+                "description": ""
+            }
+        ],
+        "repeatRight": [
+            {
+                "legacyCodepoints": [
+                    "232"
+                ],
+                "codepoint": "U+E041",
+                "description": ""
+            }
+        ],
+        "repeatRightLeftThick": [
+            {
+                "legacyCodepoints": [
+                    "133"
+                ],
+                "codepoint": "U+FFFD",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "barlineSingle": [
+            {
+                "legacyCodepoints": [
+                    "138"
+                ],
+                "codepoint": "U+E030",
+                "description": ""
+            }
+        ],
+        "barlineFinal": [
+            {
+                "legacyCodepoints": [
+                    "145"
+                ],
+                "codepoint": "U+E032",
+                "description": ""
+            }
+        ],
+        "barlineDouble": [
+            {
+                "legacyCodepoints": [
+                    "149"
+                ],
+                "codepoint": "U+E031",
+                "description": ""
+            }
+        ],
+        "barlineDashed": [
+            {
+                "legacyCodepoints": [
+                    "154"
+                ],
+                "codepoint": "U+E036",
+                "description": ""
+            }
+        ]
+    }
 }

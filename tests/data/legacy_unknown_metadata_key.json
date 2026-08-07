@@ -3,19 +3,15 @@
     "fontType": "engraving",
     "fontStyle": "engraved",
     "smuflSuccessorFont": "Finale Maestro",
-    "staffSpacesPerEm": 4.0
+    "staffSpacesPerEm": 4.0,
+    "staffSpacesPerEmm": 4.0
   },
   "glyphs": {
-    "glyphDuplicateLegacy": [
+    "glyphOriginal": [
       {
         "legacyCodepoints": ["0x2B"],
         "codepoint": "U+E000",
-        "description": "First mapping"
-      },
-      {
-        "legacyCodepoints": ["0x2B"],
-        "codepoint": "U+E001",
-        "description": "Second mapping"
+        "description": "A typo'd metadata key must not be silently accepted"
       }
     ]
   }

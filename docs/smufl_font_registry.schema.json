@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/smufl-mapping/smufl-font-registry.schema.json",
+  "title": "SMuFL Font Registry",
+  "description": "Schema for source_json/smufl_fonts.json, which records what is known about each SMuFL font. Unlike the legacy mapping files these records carry no glyph tables, so they live together in a single registry.",
+  "type": "object",
+  "propertyNames": {
+    "type": "string",
+    "minLength": 1,
+    "description": "The font name as a client would name it, e.g. 'Finale Maestro Text'."
+  },
+  "additionalProperties": {
+    "$ref": "#/$defs/smuflFont"
+  },
+  "$defs": {
+    "smuflFont": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fontType",
+        "fontStyle",
+        "staffSpacesPerEm"
+      ],
+      "properties": {
+        "fontType": {
+          "enum": [
+            "engraving",
+            "text"
+          ],
+          "description": "How the font is used in a score. 'engraving' fonts are placed in the score as notation; 'text' fonts are set inline with running text."
+        },
+        "fontStyle": {
+          "enum": [
+            "engraved",
+            "handwritten"
+          ],
+          "description": "What the font looks like: 'engraved' imitates traditional plate engraving, 'handwritten' imitates manuscript. Independent of fontType."
+        },
+        "staffSpacesPerEm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "description": "How many staff spaces one em spans. A SMuFL music font is 4.0 by definition. Text fonts differ by convention: Bravura Text and its peers use 5.0 while MakeMusic's text faces stay on the music em scale at 4.0, so the value must be recorded rather than assumed. null means it could not be established."
+        },
+        "sizeNotes": {
+          "type": "string",
+          "description": "Why staffSpacesPerEm holds the value it does. Expected whenever the value is null or was not confirmed by measurement."
+        }
+      }
+    }
+  }
+}

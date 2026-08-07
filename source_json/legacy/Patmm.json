@@ -1,119 +1,129 @@
 {
-    "accidentalNatural": [
-        {
-            "legacyCodepoints": [
-                "162"
-            ],
-            "codepoint": "U+E261",
-            "description": ""
-        }
-    ],
-    "accidentalDoubleFlat": [
-        {
-            "legacyCodepoints": [
-                "163"
-            ],
-            "codepoint": "U+E264",
-            "description": ""
-        }
-    ],
-    "metNote8thUp": [
-        {
-            "legacyCodepoints": [
-                "165"
-            ],
-            "codepoint": "U+ECA7",
-            "description": ""
-        }
-    ],
-    "accidentalDoubleSharp": [
-        {
-            "legacyCodepoints": [
-                "167"
-            ],
-            "codepoint": "U+E263",
-            "description": ""
-        }
-    ],
-    "accidentalSharp": [
-        {
-            "legacyCodepoints": [
-                "176"
-            ],
-            "codepoint": "U+E262",
-            "description": ""
-        }
-    ],
-    "accidentalThreeQuarterTonesSharpArrowUp": [
-        {
-            "legacyCodepoints": [
-                "182"
-            ],
-            "codepoint": "U+E274",
-            "description": ""
-        }
-    ],
-    "accidentalQuarterToneSharpNaturalArrowUp": [
-        {
-            "legacyCodepoints": [
-                "223"
-            ],
-            "codepoint": "U+E272",
-            "description": ""
-        }
-    ],
-    "accidentalFlat": [
-        {
-            "legacyCodepoints": [
-                "8224"
-            ],
-            "codepoint": "U+E260",
-            "description": ""
-        }
-    ],
-    "accidentalQuarterToneFlatArrowUp": [
-        {
-            "legacyCodepoints": [
-                "8226"
-            ],
-            "codepoint": "U+E270",
-            "description": ""
-        }
-    ],
-    "metNote16thUp": [
-        {
-            "legacyCodepoints": [
-                "8706"
-            ],
-            "codepoint": "U+ECA9",
-            "description": ""
-        }
-    ],
-    "metNoteWhole": [
-        {
-            "legacyCodepoints": [
-                "8719"
-            ],
-            "codepoint": "U+ECA2",
-            "description": ""
-        }
-    ],
-    "metNoteQuarterUp": [
-        {
-            "legacyCodepoints": [
-                "8734"
-            ],
-            "codepoint": "U+ECA5",
-            "description": ""
-        }
-    ],
-    "metNoteHalfUp": [
-        {
-            "legacyCodepoints": [
-                "8804"
-            ],
-            "codepoint": "U+ECA3",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": null,
+        "successorNotes": "No candidate SMuFL face shares its designs.",
+        "staffSpacesPerEm": null,
+        "sizeNotes": "Measurements scatter from 1.09 to 7.05 across the 13 mapped glyphs with no coherent scale, so no staff-relative size can be established."
+    },
+    "glyphs": {
+        "accidentalNatural": [
+            {
+                "legacyCodepoints": [
+                    "162"
+                ],
+                "codepoint": "U+E261",
+                "description": ""
+            }
+        ],
+        "accidentalDoubleFlat": [
+            {
+                "legacyCodepoints": [
+                    "163"
+                ],
+                "codepoint": "U+E264",
+                "description": ""
+            }
+        ],
+        "metNote8thUp": [
+            {
+                "legacyCodepoints": [
+                    "165"
+                ],
+                "codepoint": "U+ECA7",
+                "description": ""
+            }
+        ],
+        "accidentalDoubleSharp": [
+            {
+                "legacyCodepoints": [
+                    "167"
+                ],
+                "codepoint": "U+E263",
+                "description": ""
+            }
+        ],
+        "accidentalSharp": [
+            {
+                "legacyCodepoints": [
+                    "176"
+                ],
+                "codepoint": "U+E262",
+                "description": ""
+            }
+        ],
+        "accidentalThreeQuarterTonesSharpArrowUp": [
+            {
+                "legacyCodepoints": [
+                    "182"
+                ],
+                "codepoint": "U+E274",
+                "description": ""
+            }
+        ],
+        "accidentalQuarterToneSharpNaturalArrowUp": [
+            {
+                "legacyCodepoints": [
+                    "223"
+                ],
+                "codepoint": "U+E272",
+                "description": ""
+            }
+        ],
+        "accidentalFlat": [
+            {
+                "legacyCodepoints": [
+                    "8224"
+                ],
+                "codepoint": "U+E260",
+                "description": ""
+            }
+        ],
+        "accidentalQuarterToneFlatArrowUp": [
+            {
+                "legacyCodepoints": [
+                    "8226"
+                ],
+                "codepoint": "U+E270",
+                "description": ""
+            }
+        ],
+        "metNote16thUp": [
+            {
+                "legacyCodepoints": [
+                    "8706"
+                ],
+                "codepoint": "U+ECA9",
+                "description": ""
+            }
+        ],
+        "metNoteWhole": [
+            {
+                "legacyCodepoints": [
+                    "8719"
+                ],
+                "codepoint": "U+ECA2",
+                "description": ""
+            }
+        ],
+        "metNoteQuarterUp": [
+            {
+                "legacyCodepoints": [
+                    "8734"
+                ],
+                "codepoint": "U+ECA5",
+                "description": ""
+            }
+        ],
+        "metNoteHalfUp": [
+            {
+                "legacyCodepoints": [
+                    "8804"
+                ],
+                "codepoint": "U+ECA3",
+                "description": ""
+            }
+        ]
+    }
 }

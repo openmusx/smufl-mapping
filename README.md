@@ -56,12 +56,29 @@ FetchContent_MakeAvailable(smufl_mapping)
 target_link_libraries(your_target PRIVATE smufl_mapping)
 ```
 
-By default, the build regenerates headers (requires Python and fetches `w3c/smufl`).
-To skip Python and use the checked-in generated headers (no FetchContent), set:
+### Consuming the library requires no Python
+
+By default the build uses the generated headers checked into `src/detail/`, so a client
+needs no Python and no `FetchContent` of `w3c/smufl`. This is deliberate: **Python is a
+maintainer dependency, not a client dependency.** Keeping the generated headers in the
+repository is what makes that possible, so they are committed alongside the JSON they are
+generated from.
+
+To regenerate the headers instead — which requires Python 3 and fetches `w3c/smufl` — set:
 
 ```cmake
-set(SMUFL_MAPPING_USE_PREGENERATED_HEADERS ON)
+set(SMUFL_MAPPING_USE_PREGENERATED_HEADERS OFF)
 ```
+
+Two consequences worth knowing when working on the project itself:
+
+- The JSON source data, the Python tooling under `tools/`, and the Python tests are all
+  only exercised when regeneration is enabled. In particular **the Python tests register
+  with CTest only in that configuration**, so a default `ctest` run reports fewer tests and
+  will not catch a regression in the validator or generators. CI runs both configurations;
+  a local check of tooling changes should use `-DSMUFL_MAPPING_USE_PREGENERATED_HEADERS=OFF`.
+- After changing anything under `source_json/`, regenerate and commit the resulting headers,
+  or clients will keep seeing the previous data.
 
 Then in C++:
 

@@ -1,102 +1,112 @@
 {
-    "gClef": [
-        {
-            "legacyCodepoints": [
-                "38"
-            ],
-            "codepoint": "U+E050",
-            "description": ""
-        }
-    ],
-    "fClef": [
-        {
-            "legacyCodepoints": [
-                "63"
-            ],
-            "codepoint": "U+E062",
-            "description": ""
-        }
-    ],
-    "accidentalQuarterToneSharp4": [
-        {
-            "legacyCodepoints": [
-                "64"
-            ],
-            "codepoint": "U+E47E",
-            "description": ""
-        }
-    ],
-    "cClef": [
-        {
-            "legacyCodepoints": [
-                "66"
-            ],
-            "codepoint": "U+E05C",
-            "description": ""
-        }
-    ],
-    "cClefFrench20C": [
-        {
-            "legacyCodepoints": [
-                "75"
-            ],
-            "codepoint": "U+F4BF",
-            "description": "",
-            "smuflFontName": "Bravura"
-        }
-    ],
-    "gClef8vb": [
-        {
-            "legacyCodepoints": [
-                "86"
-            ],
-            "codepoint": "U+E052",
-            "description": ""
-        }
-    ],
-    "tremolo1": [
-        {
-            "legacyCodepoints": [
-                "124"
-            ],
-            "codepoint": "U+E220",
-            "description": ""
-        }
-    ],
-    "tremolo2": [
-        {
-            "legacyCodepoints": [
-                "199"
-            ],
-            "codepoint": "U+E221",
-            "description": ""
-        }
-    ],
-    "tremolo3": [
-        {
-            "legacyCodepoints": [
-                "200"
-            ],
-            "codepoint": "U+E222",
-            "description": ""
-        }
-    ],
-    "tremolo4": [
-        {
-            "legacyCodepoints": [
-                "230"
-            ],
-            "codepoint": "U+E223",
-            "description": ""
-        }
-    ],
-    "accidentalQuarterToneFlat4": [
-        {
-            "legacyCodepoints": [
-                "245"
-            ],
-            "codepoint": "U+E47F",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "engraving",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": null,
+        "successorNotes": "No candidate SMuFL face shares its designs.",
+        "staffSpacesPerEm": 4.0,
+        "sizeNotes": "Inferred, not measured: the outlines were drawn independently, so no exact reuse cluster exists. Per-glyph measurements cluster near 4.0 (median 3.88, clefs 3.86-4.23), consistent with Finale's convention for music fonts."
+    },
+    "glyphs": {
+        "gClef": [
+            {
+                "legacyCodepoints": [
+                    "38"
+                ],
+                "codepoint": "U+E050",
+                "description": ""
+            }
+        ],
+        "fClef": [
+            {
+                "legacyCodepoints": [
+                    "63"
+                ],
+                "codepoint": "U+E062",
+                "description": ""
+            }
+        ],
+        "accidentalQuarterToneSharp4": [
+            {
+                "legacyCodepoints": [
+                    "64"
+                ],
+                "codepoint": "U+E47E",
+                "description": ""
+            }
+        ],
+        "cClef": [
+            {
+                "legacyCodepoints": [
+                    "66"
+                ],
+                "codepoint": "U+E05C",
+                "description": ""
+            }
+        ],
+        "cClefFrench20C": [
+            {
+                "legacyCodepoints": [
+                    "75"
+                ],
+                "codepoint": "U+F4BF",
+                "description": "",
+                "smuflFontName": "Bravura"
+            }
+        ],
+        "gClef8vb": [
+            {
+                "legacyCodepoints": [
+                    "86"
+                ],
+                "codepoint": "U+E052",
+                "description": ""
+            }
+        ],
+        "tremolo1": [
+            {
+                "legacyCodepoints": [
+                    "124"
+                ],
+                "codepoint": "U+E220",
+                "description": ""
+            }
+        ],
+        "tremolo2": [
+            {
+                "legacyCodepoints": [
+                    "199"
+                ],
+                "codepoint": "U+E221",
+                "description": ""
+            }
+        ],
+        "tremolo3": [
+            {
+                "legacyCodepoints": [
+                    "200"
+                ],
+                "codepoint": "U+E222",
+                "description": ""
+            }
+        ],
+        "tremolo4": [
+            {
+                "legacyCodepoints": [
+                    "230"
+                ],
+                "codepoint": "U+E223",
+                "description": ""
+            }
+        ],
+        "accidentalQuarterToneFlat4": [
+            {
+                "legacyCodepoints": [
+                    "245"
+                ],
+                "codepoint": "U+E47F",
+                "description": ""
+            }
+        ]
+    }
 }

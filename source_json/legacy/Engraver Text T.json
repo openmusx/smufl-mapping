@@ -1,460 +1,469 @@
 {
-    "articTenutoAbove": [
-        {
-            "legacyCodepoints": [
-                "45"
-            ],
-            "codepoint": "U+E4A4",
-            "description": ""
-        }
-    ],
-    "articStaccatoAbove": [
-        {
-            "legacyCodepoints": [
-                "46"
-            ],
-            "codepoint": "U+E4A2",
-            "description": ""
-        }
-    ],
-    "metricModulationArrowRight": [
-        {
-            "legacyCodepoints": [
-                "58"
-            ],
-            "codepoint": "U+EC64",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "124"
-            ],
-            "codepoint": "U+EC64",
-            "description": ""
-        }
-    ],
-    "metricModulationArrowLeft": [
-        {
-            "legacyCodepoints": [
-                "59"
-            ],
-            "codepoint": "U+EC63",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "92"
-            ],
-            "codepoint": "U+EC63",
-            "description": ""
-        }
-    ],
-    "articAccentAbove": [
-        {
-            "legacyCodepoints": [
-                "62"
-            ],
-            "codepoint": "U+E4A0",
-            "description": ""
-        }
-    ],
-    "arpeggioArrowUpShort": [
-        {
-            "legacyCodepoints": [
-                "72"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F770",
-            "description": ""
-        }
-    ],
-    "arpeggioArrowUpMedium": [
-        {
-            "legacyCodepoints": [
-                "73"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F771",
-            "description": ""
-        }
-    ],
-    "arpeggioArrowUpLong": [
-        {
-            "legacyCodepoints": [
-                "74"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F772",
-            "description": ""
-        }
-    ],
-    "arpeggioArrowDownShort": [
-        {
-            "legacyCodepoints": [
-                "75"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F773",
-            "description": ""
-        }
-    ],
-    "arpeggioArrowDownMedium": [
-        {
-            "legacyCodepoints": [
-                "76"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F774",
-            "description": ""
-        }
-    ],
-    "arpeggioArrowDownLong": [
-        {
-            "legacyCodepoints": [
-                "77"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F775",
-            "description": ""
-        }
-    ],
-    "accidentalNatural": [
-        {
-            "legacyCodepoints": [
-                "78"
-            ],
-            "codepoint": "U+E261",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "110"
-            ],
-            "codepoint": "U+E261",
-            "description": ""
-        }
-    ],
-    "harpPedalCentered": [
-        {
-            "legacyCodepoints": [
-                "79"
-            ],
-            "codepoint": "U+E681",
-            "description": ""
-        }
-    ],
-    "harpPedalDivider": [
-        {
-            "legacyCodepoints": [
-                "80"
-            ],
-            "codepoint": "U+E683",
-            "description": ""
-        }
-    ],
-    "csymBracketRightTall": [
-        {
-            "legacyCodepoints": [
-                "82"
-            ],
-            "codepoint": "U+E878",
-            "description": ""
-        }
-    ],
-    "accidentalSharp": [
-        {
-            "legacyCodepoints": [
-                "83"
-            ],
-            "codepoint": "U+E262",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "115"
-            ],
-            "codepoint": "U+E262",
-            "description": ""
-        }
-    ],
-    "arrowheadBlackDown": [
-        {
-            "legacyCodepoints": [
-                "84"
-            ],
-            "codepoint": "U+EB7C",
-            "description": ""
-        }
-    ],
-    "arrowUpShort": [
-        {
-            "legacyCodepoints": [
-                "85"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F776",
-            "description": ""
-        }
-    ],
-    "arrowUpMedium": [
-        {
-            "legacyCodepoints": [
-                "86"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F777",
-            "description": ""
-        }
-    ],
-    "arrowUpLong": [
-        {
-            "legacyCodepoints": [
-                "87"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F778",
-            "description": ""
-        }
-    ],
-    "arrowDownShort": [
-        {
-            "legacyCodepoints": [
-                "88"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F779",
-            "description": ""
-        }
-    ],
-    "arrowDownMedium": [
-        {
-            "legacyCodepoints": [
-                "89"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F77A",
-            "description": ""
-        }
-    ],
-    "arrowDownLong": [
-        {
-            "legacyCodepoints": [
-                "90"
-            ],
-            "nameIsMakeMusic": true,
-            "codepoint": "U+F77B",
-            "description": ""
-        }
-    ],
-    "quindicesimaBassaMb": [
-        {
-            "legacyCodepoints": [
-                "96"
-            ],
-            "codepoint": "U+E51D",
-            "description": ""
-        }
-    ],
-    "noteDoubleWholeSquare": [
-        {
-            "legacyCodepoints": [
-                "98"
-            ],
-            "codepoint": "U+E1D1",
-            "description": ""
-        }
-    ],
-    "metAugmentationDot": [
-        {
-            "legacyCodepoints": [
-                "100"
-            ],
-            "codepoint": "U+ECB7",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "235"
-            ],
-            "codepoint": "U+ECB7",
-            "description": ""
-        }
-    ],
-    "metNote8thUp": [
-        {
-            "legacyCodepoints": [
-                "101"
-            ],
-            "codepoint": "U+ECA7",
-            "description": ""
-        }
-    ],
-    "accidentalFlat": [
-        {
-            "legacyCodepoints": [
-                "102"
-            ],
-            "codepoint": "U+E260",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "103"
-            ],
-            "codepoint": "U+E260",
-            "description": ""
-        }
-    ],
-    "metNoteHalfUp": [
-        {
-            "legacyCodepoints": [
-                "104"
-            ],
-            "codepoint": "U+ECA3",
-            "description": ""
-        }
-    ],
-    "csymBracketLeftTall": [
-        {
-            "legacyCodepoints": [
-                "107"
-            ],
-            "codepoint": "U+E877",
-            "description": ""
-        },
-        {
-            "legacyCodepoints": [
-                "114"
-            ],
-            "codepoint": "U+E877",
-            "description": ""
-        }
-    ],
-    "harpPedalRaised": [
-        {
-            "legacyCodepoints": [
-                "111"
-            ],
-            "codepoint": "U+E680",
-            "description": ""
-        }
-    ],
-    "harpPedalLowered": [
-        {
-            "legacyCodepoints": [
-                "112"
-            ],
-            "codepoint": "U+E682",
-            "description": ""
-        }
-    ],
-    "metNoteQuarterUp": [
-        {
-            "legacyCodepoints": [
-                "113"
-            ],
-            "codepoint": "U+ECA5",
-            "description": ""
-        }
-    ],
-    "arrowheadBlackUp": [
-        {
-            "legacyCodepoints": [
-                "116"
-            ],
-            "codepoint": "U+EB78",
-            "description": ""
-        }
-    ],
-    "noteDoubleWhole": [
-        {
-            "legacyCodepoints": [
-                "117"
-            ],
-            "codepoint": "U+ECA0",
-            "description": "",
-            "alternate": true
-        }
-    ],
-    "metNoteDoubleWhole": [
-        {
-            "legacyCodepoints": [
-                "118"
-            ],
-            "codepoint": "U+ECA0",
-            "description": ""
-        }
-    ],
-    "metNoteWhole": [
-        {
-            "legacyCodepoints": [
-                "119"
-            ],
-            "codepoint": "U+ECA2",
-            "description": ""
-        }
-    ],
-    "metNote16thUp": [
-        {
-            "legacyCodepoints": [
-                "120"
-            ],
-            "codepoint": "U+ECA9",
-            "description": ""
-        }
-    ],
-    "timeSigParensLeft": [
-        {
-            "legacyCodepoints": [
-                "123"
-            ],
-            "codepoint": "U+E094",
-            "description": ""
-        }
-    ],
-    "timeSigParensRight": [
-        {
-            "legacyCodepoints": [
-                "125"
-            ],
-            "codepoint": "U+E095",
-            "description": ""
-        }
-    ],
-    "ottavaBassa": [
-        {
-            "legacyCodepoints": [
-                "195"
-            ],
-            "codepoint": "U+E512",
-            "description": ""
-        }
-    ],
-    "ottavaBassaVb": [
-        {
-            "legacyCodepoints": [
-                "215"
-            ],
-            "codepoint": "U+E51C",
-            "description": ""
-        }
-    ],
-    "quindicesimaBassa": [
-        {
-            "legacyCodepoints": [
-                "219"
-            ],
-            "codepoint": "U+E516",
-            "description": ""
-        }
-    ],
-    "ottavaBassaBa": [
-        {
-            "legacyCodepoints": [
-                "227"
-            ],
-            "codepoint": "U+E513",
-            "description": ""
-        }
-    ]
+    "fontMetadata": {
+        "fontType": "text",
+        "fontStyle": "engraved",
+        "smuflSuccessorFont": "Finale Engraver",
+        "successorNotes": "No SMuFL Finale Engraver *text* face exists, so the music face is the only successor; 75% of glyphs match it by aspect ratio.",
+        "staffSpacesPerEm": 4.0
+    },
+    "glyphs": {
+        "articTenutoAbove": [
+            {
+                "legacyCodepoints": [
+                    "45"
+                ],
+                "codepoint": "U+E4A4",
+                "description": ""
+            }
+        ],
+        "articStaccatoAbove": [
+            {
+                "legacyCodepoints": [
+                    "46"
+                ],
+                "codepoint": "U+E4A2",
+                "description": ""
+            }
+        ],
+        "metricModulationArrowRight": [
+            {
+                "legacyCodepoints": [
+                    "58"
+                ],
+                "codepoint": "U+EC64",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "124"
+                ],
+                "codepoint": "U+EC64",
+                "description": ""
+            }
+        ],
+        "metricModulationArrowLeft": [
+            {
+                "legacyCodepoints": [
+                    "59"
+                ],
+                "codepoint": "U+EC63",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "92"
+                ],
+                "codepoint": "U+EC63",
+                "description": ""
+            }
+        ],
+        "articAccentAbove": [
+            {
+                "legacyCodepoints": [
+                    "62"
+                ],
+                "codepoint": "U+E4A0",
+                "description": ""
+            }
+        ],
+        "arpeggioArrowUpShort": [
+            {
+                "legacyCodepoints": [
+                    "72"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F770",
+                "description": ""
+            }
+        ],
+        "arpeggioArrowUpMedium": [
+            {
+                "legacyCodepoints": [
+                    "73"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F771",
+                "description": ""
+            }
+        ],
+        "arpeggioArrowUpLong": [
+            {
+                "legacyCodepoints": [
+                    "74"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F772",
+                "description": ""
+            }
+        ],
+        "arpeggioArrowDownShort": [
+            {
+                "legacyCodepoints": [
+                    "75"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F773",
+                "description": ""
+            }
+        ],
+        "arpeggioArrowDownMedium": [
+            {
+                "legacyCodepoints": [
+                    "76"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F774",
+                "description": ""
+            }
+        ],
+        "arpeggioArrowDownLong": [
+            {
+                "legacyCodepoints": [
+                    "77"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F775",
+                "description": ""
+            }
+        ],
+        "accidentalNatural": [
+            {
+                "legacyCodepoints": [
+                    "78"
+                ],
+                "codepoint": "U+E261",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "110"
+                ],
+                "codepoint": "U+E261",
+                "description": ""
+            }
+        ],
+        "harpPedalCentered": [
+            {
+                "legacyCodepoints": [
+                    "79"
+                ],
+                "codepoint": "U+E681",
+                "description": ""
+            }
+        ],
+        "harpPedalDivider": [
+            {
+                "legacyCodepoints": [
+                    "80"
+                ],
+                "codepoint": "U+E683",
+                "description": ""
+            }
+        ],
+        "csymBracketRightTall": [
+            {
+                "legacyCodepoints": [
+                    "82"
+                ],
+                "codepoint": "U+E878",
+                "description": ""
+            }
+        ],
+        "accidentalSharp": [
+            {
+                "legacyCodepoints": [
+                    "83"
+                ],
+                "codepoint": "U+E262",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "115"
+                ],
+                "codepoint": "U+E262",
+                "description": ""
+            }
+        ],
+        "arrowheadBlackDown": [
+            {
+                "legacyCodepoints": [
+                    "84"
+                ],
+                "codepoint": "U+EB7C",
+                "description": ""
+            }
+        ],
+        "arrowUpShort": [
+            {
+                "legacyCodepoints": [
+                    "85"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F776",
+                "description": ""
+            }
+        ],
+        "arrowUpMedium": [
+            {
+                "legacyCodepoints": [
+                    "86"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F777",
+                "description": ""
+            }
+        ],
+        "arrowUpLong": [
+            {
+                "legacyCodepoints": [
+                    "87"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F778",
+                "description": ""
+            }
+        ],
+        "arrowDownShort": [
+            {
+                "legacyCodepoints": [
+                    "88"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F779",
+                "description": ""
+            }
+        ],
+        "arrowDownMedium": [
+            {
+                "legacyCodepoints": [
+                    "89"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F77A",
+                "description": ""
+            }
+        ],
+        "arrowDownLong": [
+            {
+                "legacyCodepoints": [
+                    "90"
+                ],
+                "nameIsMakeMusic": true,
+                "codepoint": "U+F77B",
+                "description": ""
+            }
+        ],
+        "quindicesimaBassaMb": [
+            {
+                "legacyCodepoints": [
+                    "96"
+                ],
+                "codepoint": "U+E51D",
+                "description": ""
+            }
+        ],
+        "noteDoubleWholeSquare": [
+            {
+                "legacyCodepoints": [
+                    "98"
+                ],
+                "codepoint": "U+E1D1",
+                "description": ""
+            }
+        ],
+        "metAugmentationDot": [
+            {
+                "legacyCodepoints": [
+                    "100"
+                ],
+                "codepoint": "U+ECB7",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "235"
+                ],
+                "codepoint": "U+ECB7",
+                "description": ""
+            }
+        ],
+        "metNote8thUp": [
+            {
+                "legacyCodepoints": [
+                    "101"
+                ],
+                "codepoint": "U+ECA7",
+                "description": ""
+            }
+        ],
+        "accidentalFlat": [
+            {
+                "legacyCodepoints": [
+                    "102"
+                ],
+                "codepoint": "U+E260",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "103"
+                ],
+                "codepoint": "U+E260",
+                "description": ""
+            }
+        ],
+        "metNoteHalfUp": [
+            {
+                "legacyCodepoints": [
+                    "104"
+                ],
+                "codepoint": "U+ECA3",
+                "description": ""
+            }
+        ],
+        "csymBracketLeftTall": [
+            {
+                "legacyCodepoints": [
+                    "107"
+                ],
+                "codepoint": "U+E877",
+                "description": ""
+            },
+            {
+                "legacyCodepoints": [
+                    "114"
+                ],
+                "codepoint": "U+E877",
+                "description": ""
+            }
+        ],
+        "harpPedalRaised": [
+            {
+                "legacyCodepoints": [
+                    "111"
+                ],
+                "codepoint": "U+E680",
+                "description": ""
+            }
+        ],
+        "harpPedalLowered": [
+            {
+                "legacyCodepoints": [
+                    "112"
+                ],
+                "codepoint": "U+E682",
+                "description": ""
+            }
+        ],
+        "metNoteQuarterUp": [
+            {
+                "legacyCodepoints": [
+                    "113"
+                ],
+                "codepoint": "U+ECA5",
+                "description": ""
+            }
+        ],
+        "arrowheadBlackUp": [
+            {
+                "legacyCodepoints": [
+                    "116"
+                ],
+                "codepoint": "U+EB78",
+                "description": ""
+            }
+        ],
+        "noteDoubleWhole": [
+            {
+                "legacyCodepoints": [
+                    "117"
+                ],
+                "codepoint": "U+ECA0",
+                "description": "",
+                "alternate": true
+            }
+        ],
+        "metNoteDoubleWhole": [
+            {
+                "legacyCodepoints": [
+                    "118"
+                ],
+                "codepoint": "U+ECA0",
+                "description": ""
+            }
+        ],
+        "metNoteWhole": [
+            {
+                "legacyCodepoints": [
+                    "119"
+                ],
+                "codepoint": "U+ECA2",
+                "description": ""
+            }
+        ],
+        "metNote16thUp": [
+            {
+                "legacyCodepoints": [
+                    "120"
+                ],
+                "codepoint": "U+ECA9",
+                "description": ""
+            }
+        ],
+        "timeSigParensLeft": [
+            {
+                "legacyCodepoints": [
+                    "123"
+                ],
+                "codepoint": "U+E094",
+                "description": ""
+            }
+        ],
+        "timeSigParensRight": [
+            {
+                "legacyCodepoints": [
+                    "125"
+                ],
+                "codepoint": "U+E095",
+                "description": ""
+            }
+        ],
+        "ottavaBassa": [
+            {
+                "legacyCodepoints": [
+                    "195"
+                ],
+                "codepoint": "U+E512",
+                "description": ""
+            }
+        ],
+        "ottavaBassaVb": [
+            {
+                "legacyCodepoints": [
+                    "215"
+                ],
+                "codepoint": "U+E51C",
+                "description": ""
+            }
+        ],
+        "quindicesimaBassa": [
+            {
+                "legacyCodepoints": [
+                    "219"
+                ],
+                "codepoint": "U+E516",
+                "description": ""
+            }
+        ],
+        "ottavaBassaBa": [
+            {
+                "legacyCodepoints": [
+                    "227"
+                ],
+                "codepoint": "U+E513",
+                "description": ""
+            }
+        ]
+    }
 }
