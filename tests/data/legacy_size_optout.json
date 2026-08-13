@@ -4,7 +4,9 @@
     "fontStyle": "engraved",
     "smuflSuccessorFont": "Finale Maestro Text",
     "staffSpacesPerEm": null,
-    "sizeNotes": "A font whose point size has no staff-relative meaning."
+    "sizeNotes": "A font whose point size has no staff-relative meaning.",
+    "provenance": "independent",
+    "provenanceNotes": "Fixture data, invented for this test."
   },
   "glyphs": {
     "glyphOriginal": [

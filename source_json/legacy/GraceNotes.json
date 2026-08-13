@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "No candidate SMuFL face shares its designs.",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "Inferred, not measured: the outlines were drawn independently, so no exact reuse cluster exists. Per-glyph measurements cluster near 4.0 (median 3.88, clefs 3.86-4.23), consistent with Finale's convention for music fonts."
+        "sizeNotes": "Inferred, not measured: the outlines were drawn independently, so no exact reuse cluster exists. Per-glyph measurements cluster near 4.0 (median 3.88, clefs 3.86-4.23), consistent with Finale's convention for music fonts.",
+        "provenance": "independent",
+        "provenanceNotes": "Compiled for this project; no conversion data for this font is distributed with Finale."
     },
     "glyphs": {
         "gClef": [

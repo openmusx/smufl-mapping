@@ -4,7 +4,9 @@
         "fontStyle": "engraved",
         "smuflSuccessorFont": "Finale Maestro",
         "successorNotes": "76 of 77 mapped glyphs match Finale Maestro by aspect ratio.",
-        "staffSpacesPerEm": 4.0
+        "staffSpacesPerEm": 4.0,
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27. The mapping content remains materially unchanged from that source."
     },
     "glyphs": {
         "pictBeaterSoftTimpaniRight": [

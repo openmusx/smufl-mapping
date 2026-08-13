@@ -4,7 +4,9 @@
         "fontStyle": "handwritten",
         "smuflSuccessorFont": null,
         "successorNotes": "The file maps a single glyph, which is too little to establish a successor.",
-        "staffSpacesPerEm": 4.0
+        "staffSpacesPerEm": 4.0,
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27. The mapping content remains materially unchanged from that source."
     },
     "glyphs": {
         "enclosureClosed": [

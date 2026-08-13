@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "No candidate SMuFL face shares its designs.",
         "staffSpacesPerEm": null,
-        "sizeNotes": "Measured, but no consistent scale: the harp pedal glyphs imply roughly 5.4 staff spaces per em while pluckedSnapPizzicatoAbove implies roughly 2.6. The font's em is not staff-relative."
+        "sizeNotes": "Measured, but no consistent scale: the harp pedal glyphs imply roughly 5.4 staff spaces per em while pluckedSnapPizzicatoAbove implies roughly 2.6. The font's em is not staff-relative.",
+        "provenance": "independent",
+        "provenanceNotes": "Compiled for this project; no conversion data for this font is distributed with Finale."
     },
     "glyphs": {
         "harpPedalRaised": [

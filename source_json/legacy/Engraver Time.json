@@ -4,7 +4,9 @@
         "fontStyle": "engraved",
         "smuflSuccessorFont": "Finale Engraver",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "Measured against Finale Engraver after resolving the U+FFFD entries through glyphnamesFinale.json: 15 of 20 measurements match 4.0 exactly. The large time signature digits are about 8.6 staff spaces tall by design, and Finale Engraver draws the same glyphs (U+F440-U+F449) at the same em scale, 2.15 em."
+        "sizeNotes": "Measured against Finale Engraver after resolving the U+FFFD entries through glyphnamesFinale.json: 15 of 20 measurements match 4.0 exactly. The large time signature digits are about 8.6 staff spaces tall by design, and Finale Engraver draws the same glyphs (U+F440-U+F449) at the same em scale, 2.15 em.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27. The mapping content remains materially unchanged from that source."
     },
     "glyphs": {
         "timeSig0Large": [

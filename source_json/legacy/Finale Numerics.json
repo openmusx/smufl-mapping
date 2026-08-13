@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "No candidate face shares its designs; only 6 glyphs are comparable.",
         "staffSpacesPerEm": null,
-        "sizeNotes": "A numeral and figured-bass font. No scale is consistent across its glyphs against either a SMuFL music font or a SMuFL text font; its point size is not staff-relative."
+        "sizeNotes": "A numeral and figured-bass font. No scale is consistent across its glyphs against either a SMuFL music font or a SMuFL text font; its point size is not staff-relative.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27 and substantially rebuilt for this project; most entries differ from the original."
     },
     "glyphs": {
         "figbass1": [

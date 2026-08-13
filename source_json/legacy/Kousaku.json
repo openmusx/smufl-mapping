@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "No candidate SMuFL face shares its designs.",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "Established from the staff5Lines anchor (3.9961), identical to Maestro's. This corroborates published reports that Kousaku is plug-compatible with Maestro. Median against Finale Legacy is exactly 4.0000."
+        "sizeNotes": "Established from the staff5Lines anchor (3.9961), identical to Maestro's. This corroborates published reports that Kousaku is plug-compatible with Maestro. Median against Finale Legacy is exactly 4.0000.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27 and revised for this project, chiefly by adding legacy codepoints for glyphs the original mapped only once."
     },
     "glyphs": {
         "tremolo1": [

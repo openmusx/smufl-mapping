@@ -108,7 +108,7 @@ This project includes auto-generated headers derived from SMuFL metadata:
 
 - `src/detail/glyphnames_smufl.h` — from `metadata/glyphnames.json` in the fetched `w3c/smufl` repo (official glyph definitions)
 - `src/detail/glyphnames_finale.h` — from `glyphnamesFinale.json` (list of optional-range glyphs shared by all MakeMusic SMuFL fonts)
-- `src/detail/glyphnames_bravura.h` — from `glyphnamesBravura.json` (optional-range glyphs extracted from Bravura font)
+- `src/detail/glyphnames_bravura.h` — from `glyphnamesBravura.json` (optional-range glyphs, copied from Bravura's own metadata)
 - `src/detail/legacy/...` — legacy font mappings from legacy mapping files in `source_json/legacy`
 
 Python scripts in `tools/` regenerate these files automatically as needed.
@@ -119,9 +119,17 @@ Python scripts in `tools/` regenerate these files automatically as needed.
 
 MIT License — see [LICENSE](LICENSE) for details.
 
+The MIT license covers this project's own work. Some of the data it builds on
+originates with MakeMusic, Inc., and [NOTICE.md](NOTICE.md) sets out exactly
+which data that is and where it came from. Each legacy mapping file also records
+its own origin in `fontMetadata.provenance`.
+
 ---
 
 ## Credits
 
 - SMuFL data from the `w3c/smufl` repository and published spec: [https://w3c.github.io/smufl](https://w3c.github.io/smufl)
-- Finale glyph metadata © MakeMusic, used under fair use for interoperability.
+- Legacy font mapping data and Finale glyph metadata originating with MakeMusic, Inc.,
+  used for interoperability — see [NOTICE.md](NOTICE.md).
+- Bravura optional-glyph metadata © 2019 Steinberg Media Technologies GmbH, under the
+  SIL Open Font License 1.1 — see [NOTICE.md](NOTICE.md).

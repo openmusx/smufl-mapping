@@ -5,7 +5,9 @@
         "smuflSuccessorFont": "Finale Maestro",
         "successorNotes": "A deliberate best-fit substitution rather than a design successor. Pmusic derives from the old Sonata font, which has no SMuFL migration path, so its designs match no SMuFL face (8% aspect-ratio match).",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "The outlines were drawn independently of the Finale SMuFL fonts, so there is no exact reuse cluster. Established instead from the staff5Lines anchor (4.055) and noteheadBlack (exactly 4.000)."
+        "sizeNotes": "The outlines were drawn independently of the Finale SMuFL fonts, so there is no exact reuse cluster. Established instead from the staff5Lines anchor (4.055) and noteheadBlack (exactly 4.000).",
+        "provenance": "independent",
+        "provenanceNotes": "Compiled for this project; no conversion data for this font is distributed with Finale."
     },
     "glyphs": {
         "tremolo1": [
