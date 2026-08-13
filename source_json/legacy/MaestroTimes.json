@@ -5,7 +5,9 @@
         "smuflSuccessorFont": "Finale Maestro Text",
         "successorNotes": "The text face carrying these designs: 22% of size measurements match exactly and it is the best aspect-ratio match.",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "Measured against Finale Maestro Text, which is itself 4.0 staff spaces per em; 24 of 108 measurements match exactly. Its outlines were reused into the SMuFL text face rather than a music face."
+        "sizeNotes": "Measured against Finale Maestro Text, which is itself 4.0 staff spaces per em; 24 of 108 measurements match exactly. Its outlines were reused into the SMuFL text face rather than a music face.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27 and substantially rebuilt for this project; most entries differ from the original."
     },
     "glyphs": {
         "accidentalDoubleFlat": [

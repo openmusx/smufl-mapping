@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "No candidate face shares its designs; only 8 glyphs are comparable.",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "Median lands exactly on 4.0 but only 3 of 20 measurements match exactly, as the font maps just 10 glyphs. Consistent with the rest of the Jazz family."
+        "sizeNotes": "Median lands exactly on 4.0 but only 3 of 20 measurements match exactly, as the font maps just 10 glyphs. Consistent with the rest of the Jazz family.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27. The mapping content remains materially unchanged from that source."
     },
     "glyphs": {
         "accidentalFlat": [

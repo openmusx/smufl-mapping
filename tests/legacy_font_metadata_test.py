@@ -24,6 +24,8 @@ CASES = {
     "legacy_invalid_font_type.json": (True, "fontType"),
     "legacy_missing_successor.json": (True, "smuflSuccessorFont"),
     "legacy_missing_font_style.json": (True, "fontStyle"),
+    "legacy_missing_provenance.json": (True, "provenance"),
+    "legacy_invalid_provenance.json": (True, "provenance"),
     "legacy_size_optout.json": (False, ""),
 }
 

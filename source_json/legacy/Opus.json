@@ -5,7 +5,9 @@
         "smuflSuccessorFont": "Bravura",
         "successorNotes": "A deliberate substitution, not a design successor. Sibelius never supported SMuFL, so Opus has no SMuFL descendant. Bravura is named because the OFL font Norfolk is Bravura reconfigured onto the Opus character layout, making it the established modern stand-in for Opus.",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "Measured against Bravura on single-symbol anchors (cClef 4.03, accidentalSharp 4.06, accidentalFlat 4.08); notehead comparison against Leland and Finale Maestro corroborates 3.95-4.06 after correcting for notehead overshoot. Clefs and time-signature digits scatter 3.7-4.3, the expected signature of an independently drawn design."
+        "sizeNotes": "Measured against Bravura on single-symbol anchors (cClef 4.03, accidentalSharp 4.06, accidentalFlat 4.08); notehead comparison against Leland and Finale Maestro corroborates 3.95-4.06 after correcting for notehead overshoot. Clefs and time-signature digits scatter 3.7-4.3, the expected signature of an independently drawn design.",
+        "provenance": "independent",
+        "provenanceNotes": "Compiled for this project; no conversion data for this font is distributed with Finale. Mappings were derived from Nervion and Poincon, two OFL fonts that port a SMuFL design onto the Opus layout, cross-checked against each other and against Opus itself. Legacy codepoints are MacRoman byte values read from Opus's own (1,0) cmap subtable."
     },
     "glyphs": {
         "accidentalDoubleFlat": [

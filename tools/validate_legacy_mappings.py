@@ -33,10 +33,13 @@ ALLOWED_METADATA_KEYS = {
     "successorNotes",
     "staffSpacesPerEm",
     "sizeNotes",
+    "provenance",
+    "provenanceNotes",
 }
 
 FONT_TYPES = {"engraving", "text"}
 FONT_STYLES = {"engraved", "handwritten"}
+PROVENANCES = {"finale-sourced", "independent"}
 
 ALLOWED_SMUFL_FONT_KEYS = {
     "fontType",
@@ -223,6 +226,33 @@ def validate_metadata(path: Path, metadata: Dict, warnings: List[str]) -> None:
         warnings.append(
             f"{path}: 'staffSpacesPerEm' is null without 'sizeNotes'; "
             "record why the font opts out of size mapping"
+        )
+
+    # Checked last so that a file with several problems still reports the more
+    # specific one first; the fontMetadata fixtures depend on that ordering.
+    #
+    # Required rather than optional: a new mapping file whose origin nobody
+    # recorded is exactly the case the field exists to prevent, and unlike
+    # smuflSuccessorFont there is no "not established" state to represent -- a
+    # file either came from Finale's conversion data or it did not.
+    if "provenance" not in metadata:
+        raise ValidationError(
+            f"{path}: 'fontMetadata' is missing 'provenance' "
+            f"(one of {sorted(PROVENANCES)}); see NOTICE.md"
+        )
+    if metadata["provenance"] not in PROVENANCES:
+        raise ValidationError(
+            f"{path}: 'provenance' must be one of {sorted(PROVENANCES)}, "
+            f"got {metadata['provenance']!r}"
+        )
+
+    if "provenanceNotes" in metadata and not isinstance(metadata["provenanceNotes"], str):
+        raise ValidationError(f"{path}: 'provenanceNotes' must be a string")
+
+    if not metadata.get("provenanceNotes"):
+        warnings.append(
+            f"{path}: 'provenance' is set without 'provenanceNotes'; "
+            "record what the mapping was derived from and what has changed since"
         )
 
 

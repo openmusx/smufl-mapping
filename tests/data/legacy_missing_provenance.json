@@ -1,0 +1,17 @@
+{
+  "fontMetadata": {
+    "fontType": "engraving",
+    "fontStyle": "engraved",
+    "smuflSuccessorFont": "Finale Maestro",
+    "staffSpacesPerEm": 4.0
+  },
+  "glyphs": {
+    "glyphOriginal": [
+      {
+        "legacyCodepoints": ["0x2B"],
+        "codepoint": "U+E000",
+        "description": "A file whose origin nobody recorded must be rejected"
+      }
+    ]
+  }
+}

@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "No candidate SMuFL face shares its designs.",
         "staffSpacesPerEm": null,
-        "sizeNotes": "A rehearsal mark font whose symbols are sized to text rather than to a staff. Every SMuFL font draws barlineSingle at exactly 4.000 staff spaces, but Rentaro's barlines are 0.630 em tall: at 4.0 staff spaces per em that would be a barline only 2.52 spaces tall, and at the 6.349 implied by the height its stroke would be 0.235 spaces against Bravura's 0.144. The glyphs are simply not drawn to staff proportions, so no staff-relative size can be established."
+        "sizeNotes": "A rehearsal mark font whose symbols are sized to text rather than to a staff. Every SMuFL font draws barlineSingle at exactly 4.000 staff spaces, but Rentaro's barlines are 0.630 em tall: at 4.0 staff spaces per em that would be a barline only 2.52 spaces tall, and at the 6.349 implied by the height its stroke would be 0.235 spaces against Bravura's 0.144. The glyphs are simply not drawn to staff proportions, so no staff-relative size can be established.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27. The mapping content remains materially unchanged from that source."
     },
     "glyphs": {
         "metNote32ndUp": [

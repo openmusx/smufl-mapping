@@ -29,12 +29,24 @@ Keeping font-level facts in their own object is what makes them checkable: when 
 | `successorNotes`     | string          | no       | Why `smuflSuccessorFont` holds the value it does. Expected whenever the value is `null` or the choice is not obvious. |
 | `staffSpacesPerEm`   | number or null  | yes      | How many staff spaces one em spans in this font. `null` means the font opts out of size mapping. |
 | `sizeNotes`          | string          | no       | Why `staffSpacesPerEm` holds the value it does. Expected whenever the value is `null` or was inferred rather than measured. |
+| `provenance`         | string          | yes      | Either `"finale-sourced"` or `"independent"`. Where this file's glyph table originates. |
+| `provenanceNotes`    | string          | no       | What the mapping was derived from and what has changed since. Expected on every file; the validator warns when it is absent. |
 
 #### `fontType` and `fontStyle` are orthogonal
 
 `fontType` is the font's **role** — where it goes. `fontStyle` is its **appearance**. Neither can be derived from the other: seven of the mapped fonts are handwritten *and* text-role, including `JazzText`, `Broadway Copyist Text` and `JazzCord`. A single combined enum would force each of those to drop one fact, so they are kept as separate fields.
 
 `fontStyle` is recorded from knowledge of the font, not measured. Two geometric metrics were tried and neither separates the two classes reliably: outline point count fails outright (Jazz is a clean handwritten design with fewer points than Maestro), and deviation from 180° rotational symmetry separates the Jazz family clearly but leaves Broadway Copyist — neat handwriting — overlapping Chaconne and Kousaku. The distinction is an editorial judgement about appearance, and no geometric threshold captures it.
+
+#### `provenance`
+
+Some of these mapping files were seeded from the legacy-font conversion data that Finale 27 distributed; others were compiled for this project because Finale carried no such data for the font. `provenance` records which, so the distinction is a checkable property of each file rather than institutional memory. [`NOTICE.md`](../NOTICE.md) explains why the project tracks it.
+
+The value is deliberately binary. Grading *how much* revision followed would put a number in the data that goes stale on the next edit, and the interesting question — did this table originate with MakeMusic's data or not — has only two answers. The degree of revision goes in `provenanceNotes` as prose, where it can be stated with the hedging it deserves.
+
+`provenance` is required, unlike `successorNotes` and `sizeNotes`. There is no "not yet established" state for it: a file either came from Finale's conversion data or it did not, and a new mapping file whose origin nobody recorded is precisely what the field exists to prevent.
+
+**The generator does not read it.** Provenance is a fact about how a source file came to exist, not about the font, so it stays in `source_json/` and never reaches a generated header or the API.
 
 #### Fonts with no glyph mappings
 
@@ -111,7 +123,9 @@ Each entry object may contain the following fields:
 
 #### `xOffset` and `yOffset` are preserved, not applied
 
-These are Finale-specific values carried over from the original MakeMusic mapping data. They are retained so the information is not lost, but they have no known general applicability, so the generator does not read them and `LegacyGlyphInfo` has no field for them. **Nothing in the API exposes them.**
+These are Finale-specific values carried over unchanged from the original MakeMusic mapping data. They have no general applicability *yet*, so the generator does not read them and `LegacyGlyphInfo` has no field for them. **Nothing in the API exposes them.**
+
+They are nonetheless retained deliberately. If this format is ever put forward as a standard schema for legacy font mapping, positional data of this kind has already been asked for, and it is not reconstructible once dropped: the values are not derivable from the fonts, so discarding them would be a one-way door. Carrying two unread fields is the cheaper mistake.
 
 The unit is thousandths of an em. In most entries the value equals the legacy glyph's own bounding-box origin — Maestro's `caesura` records `xOffset` `14` against a glyph whose origin sits at 0.014 em, and its `brassMuteClosed` records `yOffset` `-148` against an origin of −0.148 em. A handful of entries do not follow that pattern, so the values should be treated as historical record rather than a formula.
 

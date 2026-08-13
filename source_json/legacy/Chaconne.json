@@ -5,7 +5,9 @@
         "smuflSuccessorFont": "Chaconne Ex",
         "successorNotes": "The SMuFL successor to Chaconne. Not available locally, so unverified by measurement.",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "Established from the staff5Lines anchor (3.9961), which matches Maestro, Maestro Wide and Jazz exactly. Chaconne's SMuFL successor is Chaconne Ex, which was not available, so no outline-reuse comparison was possible and the anchor is the sole evidence."
+        "sizeNotes": "Established from the staff5Lines anchor (3.9961), which matches Maestro, Maestro Wide and Jazz exactly. Chaconne's SMuFL successor is Chaconne Ex, which was not available, so no outline-reuse comparison was possible and the anchor is the sole evidence.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27 and revised for this project, chiefly by adding legacy codepoints for glyphs the original mapped only once."
     },
     "glyphs": {
         "tremolo1": [

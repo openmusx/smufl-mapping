@@ -38,7 +38,8 @@
         "fontType",
         "fontStyle",
         "smuflSuccessorFont",
-        "staffSpacesPerEm"
+        "staffSpacesPerEm",
+        "provenance"
       ],
       "properties": {
         "fontType": {
@@ -78,6 +79,17 @@
         "sizeNotes": {
           "type": "string",
           "description": "Why staffSpacesPerEm holds the value it does. Required in practice whenever the value is null or was inferred rather than measured."
+        },
+        "provenance": {
+          "enum": [
+            "finale-sourced",
+            "independent"
+          ],
+          "description": "Where this file's glyph table originates. 'finale-sourced' means it was seeded from the legacy-font conversion data distributed with Finale, whatever has been changed since; 'independent' means it was compiled for this project because no such data exists for the font. The value records origin only, and deliberately does not grade how much revision followed, since that would drift with every edit -- provenanceNotes carries the detail."
+        },
+        "provenanceNotes": {
+          "type": "string",
+          "description": "How this file came to hold the data it does: for 'independent' files, what the mapping was derived from; for 'finale-sourced' files, what has and has not been changed since. Expected on every file."
         }
       }
     },

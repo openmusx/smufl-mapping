@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "No candidate SMuFL face shares its designs.",
         "staffSpacesPerEm": null,
-        "sizeNotes": "Measurements scatter from 1.09 to 7.05 across the 13 mapped glyphs with no coherent scale, so no staff-relative size can be established."
+        "sizeNotes": "Measurements scatter from 1.09 to 7.05 across the 13 mapped glyphs with no coherent scale, so no staff-relative size can be established.",
+        "provenance": "independent",
+        "provenanceNotes": "Compiled for this project; no conversion data for this font is distributed with Finale."
     },
     "glyphs": {
         "accidentalNatural": [

@@ -4,7 +4,9 @@
         "fontStyle": "engraved",
         "smuflSuccessorFont": "Finale Engraver",
         "successorNotes": "No SMuFL Finale Engraver *text* face exists, so the music face is the only successor; 75% of glyphs match it by aspect ratio.",
-        "staffSpacesPerEm": 4.0
+        "staffSpacesPerEm": 4.0,
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27 and revised for this project, chiefly by adding legacy codepoints for glyphs the original mapped only once."
     },
     "glyphs": {
         "articTenutoAbove": [

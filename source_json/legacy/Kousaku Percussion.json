@@ -5,7 +5,9 @@
         "smuflSuccessorFont": null,
         "successorNotes": "Too few comparable glyphs to establish a successor.",
         "staffSpacesPerEm": 4.0,
-        "sizeNotes": "34 of 150 measurements against Finale Legacy match 4.0 exactly. The font has no staff5Lines glyph mapped, so the successor comparison is the sole evidence. Note its unitsPerEm is 2130 rather than 1000."
+        "sizeNotes": "34 of 150 measurements against Finale Legacy match 4.0 exactly. The font has no staff5Lines glyph mapped, so the successor comparison is the sole evidence. Note its unitsPerEm is 2130 rather than 1000.",
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27 and revised for this project, chiefly by adding legacy codepoints for glyphs the original mapped only once."
     },
     "glyphs": {
         "noteheadTriangleUpWhite": [

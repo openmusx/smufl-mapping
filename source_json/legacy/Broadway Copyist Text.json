@@ -4,7 +4,9 @@
         "fontStyle": "handwritten",
         "smuflSuccessorFont": "Finale Broadway Legacy Text",
         "successorNotes": "The text face carrying these designs: 65% of size measurements match exactly and 75% of glyphs match by aspect ratio. Distinct from Finale Copyist Text, whose designs went to Finale Broadway Text instead.",
-        "staffSpacesPerEm": 4.0
+        "staffSpacesPerEm": 4.0,
+        "provenance": "finale-sourced",
+        "provenanceNotes": "Seeded from the legacy-font conversion data distributed with Finale 27 and revised for this project, chiefly by adding legacy codepoints for glyphs the original mapped only once."
     },
     "glyphs": {
         "enclosureParenOverLeft": [

@@ -1,0 +1,19 @@
+{
+  "fontMetadata": {
+    "fontType": "engraving",
+    "fontStyle": "engraved",
+    "smuflSuccessorFont": "Finale Maestro",
+    "staffSpacesPerEm": 4.0,
+    "provenance": "mostly-ours",
+    "provenanceNotes": "A value outside the enum must be rejected rather than recorded."
+  },
+  "glyphs": {
+    "glyphOriginal": [
+      {
+        "legacyCodepoints": ["0x2B"],
+        "codepoint": "U+E000",
+        "description": "Provenance is a closed set, not free text"
+      }
+    ]
+  }
+}
