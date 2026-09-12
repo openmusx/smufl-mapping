@@ -22,7 +22,7 @@ function(generate_legacy_fontmap_headers)
     endif()
 
     if(NOT SMUFL_W3C_SOURCE_DIR)
-        message(FATAL_ERROR "SMUFL_W3C_SOURCE_DIR is not set. Fetch w3c/smufl first.")
+        message(FATAL_ERROR "SMUFL_W3C_SOURCE_DIR is not set. Fetch w3c-cg/smufl first.")
     endif()
 
     set(SMUFL_W3C_GLYPHNAMES_JSON "${SMUFL_W3C_SOURCE_DIR}/metadata/glyphnames.json")

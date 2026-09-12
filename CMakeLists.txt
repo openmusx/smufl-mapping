@@ -28,7 +28,7 @@ if(NOT SMUFL_MAPPING_USE_PREGENERATED_HEADERS)
     # Fetch SMuFL spec
     FetchContent_Declare(
         smufl_w3c
-        GIT_REPOSITORY https://github.com/w3c/smufl.git
+        GIT_REPOSITORY https://github.com/w3c-cg/smufl.git
         GIT_TAG 753f551ca6f96bf24ba38aa2d8a317e706238c51
         SOURCE_SUBDIR _cmake_disabled_please_ignore # this is a hack to prevent FetchContent_Declare from running the fetched content cmake.
         # see https://stackoverflow.com/questions/79261625/cmake-fetchcontent-with-header-only-project/79261858#79261858
