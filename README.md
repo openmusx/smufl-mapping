@@ -46,7 +46,7 @@ include(FetchContent)
 
 FetchContent_Declare(
     smufl_mapping
-    GIT_REPOSITORY https://github.com/rpatters1/smufl-mapping.git
+    GIT_REPOSITORY https://github.com/openmusx/smufl-mapping.git
     GIT_TAG main  # or use a version tag, branch name, or commit number
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE
 )
@@ -59,12 +59,12 @@ target_link_libraries(your_target PRIVATE smufl_mapping)
 ### Consuming the library requires no Python
 
 By default the build uses the generated headers checked into `src/detail/`, so a client
-needs no Python and no `FetchContent` of `w3c/smufl`. This is deliberate: **Python is a
+needs no Python and no `FetchContent` of `w3c-cg/smufl`. This is deliberate: **Python is a
 maintainer dependency, not a client dependency.** Keeping the generated headers in the
 repository is what makes that possible, so they are committed alongside the JSON they are
 generated from.
 
-To regenerate the headers instead — which requires Python 3 and fetches `w3c/smufl` — set:
+To regenerate the headers instead — which requires Python 3 and fetches `w3c-cg/smufl` — set:
 
 ```cmake
 set(SMUFL_MAPPING_USE_PREGENERATED_HEADERS OFF)
@@ -106,7 +106,7 @@ See `.vscode_template/README.md` for setup instructions.
 
 This project includes auto-generated headers derived from SMuFL metadata:
 
-- `src/detail/glyphnames_smufl.h` — from `metadata/glyphnames.json` in the fetched `w3c/smufl` repo (official glyph definitions)
+- `src/detail/glyphnames_smufl.h` — from `metadata/glyphnames.json` in the fetched `w3c-cg/smufl` repo (official glyph definitions)
 - `src/detail/glyphnames_finale.h` — from `glyphnamesFinale.json` (list of optional-range glyphs shared by all MakeMusic SMuFL fonts)
 - `src/detail/glyphnames_bravura.h` — from `glyphnamesBravura.json` (optional-range glyphs, copied from Bravura's own metadata)
 - `src/detail/legacy/...` — legacy font mappings from legacy mapping files in `source_json/legacy`
@@ -128,7 +128,7 @@ its own origin in `fontMetadata.provenance`.
 
 ## Credits
 
-- SMuFL data from the `w3c/smufl` repository and published spec: [https://w3c.github.io/smufl](https://w3c.github.io/smufl)
+- SMuFL data from the `w3c-cg/smufl` repository and published spec: [https://smufl.formats.music](https://smufl.formats.music)
 - Legacy font mapping data and Finale glyph metadata originating with MakeMusic, Inc.,
   used for interoperability — see [NOTICE.md](NOTICE.md).
 - Bravura optional-glyph metadata © 2019 Steinberg Media Technologies GmbH, under the
